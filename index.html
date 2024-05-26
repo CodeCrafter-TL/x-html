@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>macOS</title>
+    <link rel="icon" href="./images/AppleInternalIcon 2.png" />
+    <style>
+        @keyframes progressAnimation {
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 60%;
+            }
+        }
+
+        @keyframes progressContinue {
+            0% {
+                width: 60%;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+    </style>
+    <script>
+        setTimeout(function () {
+            const ad = new Audio('audio/Begin.mp3')
+            ad.play()
+        }, 1000)
+    </script>
+</head>
+
+<body style="height: 100vh; overflow: hidden; background-color: #000;">
+    <div style="position: relative; width: 100%; height: 80%;">
+        <div style="position: absolute; top: calc(50% - 48px); left: calc(50% - 48px); filter: invert(100%)">
+            <img src="./images/AppleInternalIcon 2.png" alt="Apple Logo" width="96" height="96" id="logo"
+                style="opacity: 0;" />
+        </div>
+    </div>
+    <div id="progress-bar"
+        style="width: 15%; height: 3%; align-items: center; text-align: center; margin: auto; position: relative; top: -20%">
+        <div style="background-color: #000; border-radius: 15px; height: 10px; overflow: hidden;">
+            <div id="progress"
+                style="background-color: #fff; width: 0%; height: 100%; animation: progressAnimation 6s forwards ease-out; opacity: 1; animation-delay: 1.5s;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function redirectToDesktop() {
+            window.location.href = "logon.html"
+        }
+        function $$(id) {
+            return document.getElementById(id)
+        }
+
+        var logo = $$("logo")
+        var progressBar = $$("progress")
+
+        setTimeout(function () {
+            var rd = Math.random()
+            if (rd < 0.4) {
+                logo.style.opacity = 1
+                logo.src = "./images/Unsupported 2.png"
+                logo.style.width = `128px`
+                logo.style.height = `128px`
+                logo.style.filter = 'invert(100%)'
+                progressBar.style.display = 'none'
+            } else {
+                logo.style.opacity = 1
+                setTimeout(function () {
+                    logo.style.opacity = 0
+                    progressBar.style.opacity = 0
+                    setTimeout(function () {
+                        logo.style.opacity = 1
+                        progressBar.style.opacity = 1
+                        progressBar.style.animation = `progressContinue 2s forwards ease-out`
+                        setTimeout(function () {
+                            logo.style.opacity = 0
+                            progressBar.style.opacity = 0
+                            setTimeout(redirectToDesktop, 1000)
+                        }, 2000)
+                    }, 1000)
+                }, 8000)
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>

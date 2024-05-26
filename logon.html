@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>macOS</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./images/AppleInternalIcon 2.png" />
+    <meta charset="utf-8" />
+    <style>
+        body {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        @keyframes backgroundAnimation {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes index {
+            0% {
+                z-index: 5;
+            }
+
+            100% {
+                z-index: -1;
+            }
+        }
+
+        #user {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        #user img {
+            width: 96px;
+            height: 96px;
+        }
+
+        #pwd input {
+            border-radius: 10px;
+            border: none;
+            padding: 4px;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin-bottom: 35%;
+        }
+
+        #pwd input:hover {
+            border: none;
+        }
+
+        h3 {
+            color: #fff;
+            margin-bottom: 0.6%;
+            margin-top: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+        }
+
+        #time {
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+        }
+
+        #date {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 36px;
+            margin: 0;
+            margin-top: 6%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+        }
+
+        #now {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 124px;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.35);
+        }
+
+        .bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #000;
+            animation: backgroundAnimation 1.75s forwards, index 0.1s forwards;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body style="backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);">
+    <div class="bg"></div>
+    <div id="time">
+        <h2 id="date">00月00日 周零</h2>
+        <h1 id="now">00:00</h1>
+    </div>
+    <div id="user">
+        <img src="./images/UsersIcon 2.png">
+        <h3>User</h3>
+    </div>
+    <div id="pwd">
+        <input type="password" id="password" placeholder="  输入密码" onkeydown="checkPassword(event)">
+    </div>
+
+    <script>
+        function checkPassword(event) {
+            if (event.keyCode === 13) { // 检查是否按下回车键
+                var passwordInput = document.getElementById("password");
+                var password = passwordInput.value;
+                if (password !== "Ventura") {
+                    if (password !== "Sonoma") {
+                        // 如果密码错误，则添加左右移动的动画效果
+                        passwordInput.style.transform = "translateX(-40px)";
+                        setTimeout(function () {
+                            passwordInput.style.transform = "translateX(40px)";
+                        }, 50);
+                        setTimeout(function () {
+                            passwordInput.style.transform = "translateX(0)";
+                            passwordInput.focus(); // 让密码输入框重新获得焦点
+                        }, 100);
+                    } else {
+                        window.location.href = "desktop.html";
+                    }
+                } else {
+                    window.location.href = "desktop.html";
+                }
+            }
+        }
+
+        function updateTime() {
+            var now = new Date();
+            var hours = now.getHours().toString().padStart(2, '0');
+            var minutes = now.getMinutes().toString().padStart(2, '0');
+            var timeString = hours + ':' + minutes;
+            let dayOfWeek = now.getDay();
+            let days = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+            let dayName = days[dayOfWeek];
+            const options = { month: 'numeric', day: '2-digit' };
+            const date = now.toLocaleDateString('zh-CN', options);
+            document.getElementById('now').textContent = timeString;
+            document.getElementById('date').textContent = date.replace(/\//g, '月') + '日' + ' ' + dayName;
+        }
+
+        setInterval(updateTime, 400);
+
+        updateTime();
+    </script>
+</body>
+
+</html>
