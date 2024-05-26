@@ -1,0 +1,33 @@
+body {
+    height: 100vh;
+    font-family: -apple-system, 'PingFangSC-Regular', sans-serif;
+    background-image: url(../images/macOS\ 11\ Big\ Sur\ White.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+h4:hover {
+    cursor: default;
+}
+
+@font-face {
+    font-family: 'PingFangSC-Regular';
+    src: url(../font/苹方黑体-准-简.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h5 {
+    margin-top: 0;
+    margin-top: 6%;
+    font-size: 11.6px;
+    margin-bottom: 0;
+    text-align: center;
+}
