@@ -2,6 +2,16 @@
 
 一个使用`html`超文本标记语言开发的复刻macOS界面的页面。
 
+<p align="center">
+    <a href="https://star-history.com/#CodeCrafter-TL/x-html&Date">
+        <picture>
+            <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=CodeCrafter-TL/x-html&type=Date&theme=dark" />
+            <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=CodeCrafter-TL/x-html&type=Date" />
+            <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=CodeCrafter-TL/x-html&type=Date" />
+        </picture>
+    </a>
+</p>
+
 ### 目前还原
 
 1. 启动台
