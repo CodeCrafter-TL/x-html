@@ -1,3 +1,28 @@
+#desktop {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 0;
+}
+
+#bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/Sonoma-Day.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
 #dock {
     display: inline-flex;
     flex-direction: row;
@@ -13,12 +38,12 @@
     align-items: center;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
-    border-radius: 32px;
+    border-radius: 30px;
     box-shadow: 0px 36px 100px rgba(0, 0, 0, 0.45);
     border: 0.4px solid rgba(255, 255, 255, 0.2);
     background-color: rgba(255, 255, 255, 0.1);
     padding: 5px;
-    z-index: 2;
+    z-index: 3;
     width: auto;
     animation: DockBegin 0.75s forwards ease-in-out;
 }
@@ -30,17 +55,17 @@
     flex-direction: column;
 }
 
-#icns #AppIcon img {
+.icns #AppIcon img {
     width: 72px;
     height: 72px;
 }
 
-#icns #AppIcon #noti {
+.icns #AppIcon #noti {
     width: 18px;
     height: 18px;
 }
 
-#icons #AppIcon #light {
+.icons #AppIcon #light {
     width: 4px;
     height: 4px;
     border-radius: 1px;
@@ -48,12 +73,23 @@
     opacity: 0;
 }
 
+.icons #backdrop {
+    background: rgba(246, 246, 246, 0.36);
+    border: 1px solid #1A1A1A;
+    border-radius: 16px;
+    position: absolute;
+}
+
 .icns hr {
-    background-color: #E8E8E8;
+    background: #E8E8E8;
     border-radius: 1px;
-    margin: 0;
-    height: 65.2%;
+    border: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 75%;
     width: 1px;
+    justify-self: center;
+    align-self: center;
 }
 
 #app-name {
@@ -79,7 +115,7 @@
 }
 
 #topbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -107,6 +143,12 @@
     margin: 0;
     margin-top: 2px;
     margin-bottom: 2px;
+}
+
+#topbar #hoverd {
+    margin: 0;
+    background-color: rgba(100, 100, 100, 0.5);
+    border-radius: 8px;
 }
 
 #topbar #status {
@@ -140,54 +182,49 @@
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
-
 #win-tool {
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    display: inline-flex;
+    width: 52px;
+    height: 12px;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
     flex-direction: row;
-    z-index: inherit;
+    justify-content: center;
 }
 
-#exit {
-    border-radius: 50%;
-    background-color: rgb(255, 77, 86);
+#close {
+    background: #ff5f57;
+    border: 0.5px solid rgba(0, 0, 0, 0.20);
     width: 12px;
-    height: 12px;
+    height: 10px;
+    border-radius: 6px;
+    margin-right: 8px;
+}
+
+#minimize {
+    background: #febc2e;
+    border: 0.5px solid rgba(0, 0, 0, 0.20);
+    width: 12px;
+    height: 10px;
+    border-radius: 6px;
+}
+
+#zoom {
+    background: #28c840;
+    border: 0.5px solid rgba(0, 0, 0, 0.20);
+    width: 12px;
+    height: 10px;
+    border-radius: 6px;
     margin-left: 8px;
-    margin-top: 8px;
 }
 
 #none {
-    border-radius: 50%;
     background-color: rgba(110, 108, 103, 0.1);
+    border: 0.5px solid rgba(0, 0, 0, 0.20);
     width: 12px;
-    height: 12px;
+    height: 10px;
+    border-radius: 6px;
     margin-left: 8px;
-    margin-top: 8px;
-}
-
-#small {
-    border-radius: 50%;
-    background-color: #ffb33f;
-    width: 12px;
-    height: 12px;
-    margin-left: 8px;
-    margin-top: 8px;
-}
-
-#big {
-    border-radius: 50%;
-    background-color: #00c145;
-    width: 12px;
-    height: 12px;
-    margin-left: 8px;
-    margin-top: 8px;
 }
 
 #app-menu {
@@ -203,8 +240,9 @@
 #app-menu hr {
     background-color: rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, 0.1);
+    border: none;
     width: 180px;
-    height: 100px;
+    height: 1px;
     margin: 0;
 }
 
@@ -224,7 +262,7 @@
     color: #fff;
 }
 
-#alert {
+#alert-window {
     width: 260px;
     height: 265px;
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.05), 0 38px 90px 0 rgba(0, 0, 0, 0.25), 0 0 1px 0 rgba(0, 0, 0, 0.60), inset 0 0 3px 0 rgba(255, 255, 255, 0.10);
@@ -238,33 +276,43 @@
     left: calc(50% - 130px);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
+    z-index: 2;
+    opacity: 0;
     animation: Alert 0.5s forwards ease-in-out, opacityBegin 0.525s forwards ease-in-out;
+    animation-delay: 0.75s;
 }
 
-#alert img {
+#alert-window img {
     width: 24.61%;
     height: 24.15%;
     margin-top: 7.5%;
     border-radius: 16px;
+    opacity: 0;
     animation: opacityBegin 0.25s forwards ease-in-out;
+    animation-delay: 0.75s;
 }
 
-#alert #title {
+#alert-window #title {
     font-size: 13px;
     font-weight: bold;
     margin: 0;
     margin-top: 7.5%;
+    opacity: 0;
     animation: opacityBegin 0.25s forwards ease-in-out;
+    animation-delay: 0.75s;
 }
 
-#alert #des {
+#alert-window #des {
     font-size: 13px;
     font-weight: normal;
     margin: 0;
     margin-top: 3.77%;
+    opacity: 0;
+    animation: opacityBegin 0.25s forwards ease-in-out;
+    animation-delay: 0.75s;
 }
 
-#alert #btn {
+#alert-window #btn {
     font-size: 13px;
     text-align: center;
     line-height: 16px;
@@ -282,7 +330,44 @@
     color: #000000;
 }
 
-#alert #btn p {
+#alert-window #btn p {
     margin: 0;
     color: #fff;
+}
+
+#contextmenu {
+    display: inline-flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100px;
+    height: auto;
+    margin: 0;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    background-color: rgba(255, 255, 255, 0.4);
+    opacity: 0;
+    border-radius: 10px;
+    padding: 7.5px;
+    z-index: -0.5;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 8px 30px rgba(0, 0, 0, 0.25), 0 0 1px black;
+    font-size: 10px;
+}
+
+#ct-menu {
+    border-radius: 8px;
+    border: 0.5px solid rgba(0, 0, 0, 0.06);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+#ct-menu hr {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.1);
+    border: none;
+    width: 90%;
+    height: 1px;
+    margin: 0;
 }

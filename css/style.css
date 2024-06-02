@@ -1,15 +1,6 @@
 body {
     height: 100vh;
     font-family: -apple-system, 'PingFangSC-Regular', sans-serif;
-    background-image: url(../images/Sonoma-Day.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 0;
-    position: relative;
     overflow: hidden;
 }
 

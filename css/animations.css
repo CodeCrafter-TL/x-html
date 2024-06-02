@@ -85,10 +85,10 @@
 
 @keyframes Alert {
     0% {
-        width: 26px;
-        height: 26.5px;
-        top: calc(50% - 13.25px);
-        left: calc(50% - 13px);
+        width: 27px;
+        height: 27.5px;
+        top: calc(50% - 54px);
+        left: calc(50% - 13.75px);
     }
 
     75% {
@@ -103,5 +103,15 @@
         height: 265px;
         top: calc(50% - 132.5px);
         left: calc(50% - 130px);
+    }
+}
+
+@keyframes DesktopLefting {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -100%;
     }
 }

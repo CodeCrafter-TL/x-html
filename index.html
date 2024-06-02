@@ -41,8 +41,8 @@
         </div>
     </div>
     <div id="progress-bar"
-        style="width: 15%; height: 3%; align-items: center; text-align: center; margin: auto; position: relative; top: -20%">
-        <div style="background-color: #000; border-radius: 15px; height: 10px; overflow: hidden;">
+        style="width: 15%; height: 3%; align-items: center; text-align: center; margin: auto; position: absolute; top: 92.5%; left: calc(50% - 144px)">
+        <div style="background-color: #000; border-radius: 15px; height: 10px; overflow: hidden;" id="frame">
             <div id="progress"
                 style="background-color: #fff; width: 0%; height: 100%; animation: progressAnimation 6s forwards ease-out; opacity: 1; animation-delay: 1.5s;">
             </div>
@@ -59,6 +59,7 @@
 
         var logo = $$("logo")
         var progressBar = $$("progress")
+        var frame = $$("frame");
 
         setTimeout(function () {
             var rd = Math.random()
@@ -71,6 +72,18 @@
                 progressBar.style.display = 'none'
             } else {
                 logo.style.opacity = 1
+                setTimeout(function () {
+                    frame.style.border = `solid 0.4px rgba(255, 255, 255, 0.25)`;
+                    setTimeout(function () {
+                        frame.style.border = `none`
+                        setTimeout(function () {
+                            frame.style.border = `solid 0.4px rgba(255, 255, 255, 0.25)`;
+                            setTimeout(function () {
+                                frame.style.border = `none`;
+                            }, 2000);
+                        }, 1000);
+                    }, 7500);
+                }, 500)
                 setTimeout(function () {
                     logo.style.opacity = 0
                     progressBar.style.opacity = 0
