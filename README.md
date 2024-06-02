@@ -24,6 +24,9 @@
 
 ![界面](/docs/a1d6f3f493c9a08268a1ace2c2b3fcd6.png)
 
+#### 登录密码
+##### "Ventura"或是"Sonoma"。
+
 6. 开机
 
 ![禁行](/docs/d8df205d843add0188f3da6d397ce4ad.png)![开机](/docs/2f2e16f7e67f2cedd3ab68dc5a6730cd.png)
