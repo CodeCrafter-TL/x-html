@@ -59,47 +59,52 @@
 
         var logo = $$("logo")
         var progressBar = $$("progress")
-        var frame = $$("frame");
+        var frame = $$("frame")
 
-        setTimeout(function () {
-            var rd = Math.random()
-            if (rd < 0.4) {
-                logo.style.opacity = 1
-                logo.src = "./images/Unsupported 2.png"
-                logo.style.width = `128px`
-                logo.style.height = `128px`
-                logo.style.filter = 'invert(100%)'
-                progressBar.style.display = 'none'
-            } else {
-                logo.style.opacity = 1
-                setTimeout(function () {
-                    frame.style.border = `solid 0.4px rgba(255, 255, 255, 0.25)`;
-                    setTimeout(function () {
-                        frame.style.border = `none`
-                        setTimeout(function () {
-                            frame.style.border = `solid 0.4px rgba(255, 255, 255, 0.25)`;
-                            setTimeout(function () {
-                                frame.style.border = `none`;
-                            }, 2000);
-                        }, 1000);
-                    }, 7500);
-                }, 500)
-                setTimeout(function () {
-                    logo.style.opacity = 0
-                    progressBar.style.opacity = 0
-                    setTimeout(function () {
-                        logo.style.opacity = 1
-                        progressBar.style.opacity = 1
-                        progressBar.style.animation = `progressContinue 2s forwards ease-out`
-                        setTimeout(function () {
-                            logo.style.opacity = 0
-                            progressBar.style.opacity = 0
-                            setTimeout(redirectToDesktop, 1000)
-                        }, 2000)
-                    }, 1000)
-                }, 8000)
+        async function sleep(delayMs){
+            return new Promise(resolve => setTimeout(resolve, delayMs));
+        }
+
+        async function frameBorderAnimation(){
+            logo.style.opacity = 1;
+            await sleep(500);
+            frame.style.border = `solid 0.4px rgba(255, 255, 255, 0.25)`;
+            await sleep(7500);
+            frame.style.border = `none`;
+            await sleep(1000);
+            frame.style.border = `solid 0.4px rgba(255, 255, 255, 0.25)`;
+            await sleep(2000);
+            frame.style.border = `none`;
+        }
+
+        async function processBarAnimation(){
+            await sleep(8000);
+            logo.style.opacity = 0
+            progressBar.style.opacity = 0
+            await sleep(1000);
+            logo.style.opacity = 1
+            progressBar.style.opacity = 1
+            progressBar.style.animation = `progressContinue 2s forwards ease-out`
+            await sleep(2000);
+            logo.style.opacity = 0
+            progressBar.style.opacity = 0
+            setTimeout(redirectToDesktop, 1000)
+        }
+
+        ;(async function(){
+            await sleep(1000);
+            if(Math.random() < 0.4){
+                logo.style.opacity = 1;
+                logo.src = "./images/Unsupported 2.png";
+                logo.style.width = `128px`;
+                logo.style.height = `128px`;
+                logo.style.filter = 'invert(100%)';
+                progressBar.style.display = 'none';
+            }else{
+                frameBorderAnimation();
+                processBarAnimation();
             }
-        }, 1000)
+        })();
     </script>
 </body>
 
