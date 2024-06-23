@@ -16,11 +16,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/Sonoma-Day.png);
+    background-image: url(../images/Sequoia-Day.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     z-index: 1;
+    transition: 0.5s ease;
 }
 
 #dock {
@@ -50,7 +51,7 @@
 
 .icns #AppIcon {
     width: 72px;
-    height: 82px;
+    height: 77px;
     display: flex;
     flex-direction: column;
 }
@@ -66,8 +67,10 @@
 }
 
 .icons #AppIcon #light {
-    width: 4px;
-    height: 4px;
+    align-self: center;
+    justify-self: center;
+    max-width: 4px;
+    max-height: 4px;
     border-radius: 1px;
     background-color: #e6e6e6;
     opacity: 0;
@@ -276,7 +279,7 @@
     left: calc(50% - 130px);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
-    z-index: 2;
+    z-index: 3;
     opacity: 0;
     animation: Alert 0.5s forwards ease-in-out, opacityBegin 0.525s forwards ease-in-out;
     animation-delay: 0.75s;

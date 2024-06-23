@@ -3,6 +3,7 @@
 
 <head>
     <title>macOS</title>
+
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/animations.css" />
     <link rel="stylesheet" href="./css/apps.css" />
@@ -53,82 +54,44 @@
         <footer id="dock">
             <div class="icns" id="icns">
                 <div id="AppIcon"><img src="./images/Finder 2.png" alt="访达" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon 104.png" alt="启动台" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/safari-14-96x96_2x.png" alt="Safari浏览器" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon 106.png" alt="信息" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/ApplicationIcon 2.png" alt="邮件" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon 110.png" alt="地图" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon 107.png" alt="照片" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon 112.png" alt="FaceTime通话" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/App 2.png" alt="日历" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/Contacts 2.png" alt="联系人" onclick="OpenApp(this)"
                         style="transform: scaleX(-1);" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon 103.png" alt="提醒事项" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon 139.png" alt="备忘录" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon.png" alt="无边记" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon 132.png" alt="视频" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon 145.png" alt="音乐" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon 133.png" alt="播客" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon 102.png" alt="App Store" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <div id="AppIcon"><img src="./images/SystemPrefApp 2.png" alt="系统设置" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
                 <hr>
                 <div id="AppIcon"><img src="./images/TrashIcon 2.png" alt="废纸篓" onclick="OpenApp(this)" />
-                    <div id="noti"></div>
-                    <div id="light"></div>
                 </div>
             </div>
         </footer>
@@ -154,6 +117,31 @@
                 <img src="./images/wifi.png" width="18px" height="16px" />
             </section>
         </header>
+        <div id="hardware">
+            <div id="win-tool" style="margin-top: 8px; margin-left: 8px;">
+                <div id="close" onclick="exit('#hardware')"></div>
+                <div id="none" style="margin: 0;"></div>
+                <div id="none"></div>
+            </div>
+            <img src="./images/com.apple.macpro-2019 2.png" alt="macpro-2019" />
+            <h2>Mac Pro</h2>
+            <h5 style="margin-top: 20px; color: rgba(0, 0, 0, 0.7);" class="year">2019</h5>
+            <h5 style="top: 55%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 50px)">处理器</h5>
+            <h5 style="top: 55%; color: rgba(0, 0, 0, 0.8);">2.5GHz 二十八核Intel Xeon W</h5>
+            <h5 style="top: 59%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 50px)">图形卡</h5>
+            <h5 style="top: 59%; color: rgba(0, 0, 0, 0.8);">AMD Radeon Pro W6600X</h5>
+            <h5 style="top: 63%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 40px)">内存</h5>
+            <h5 style="top: 63%; color: rgba(0, 0, 0, 0.8);">1.5 TB 2933MHz DIMM</h5>
+            <h5 style="top: 67%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 60px)">启动磁盘</h5>
+            <h5 style="top: 67%; color: rgba(0, 0, 0, 0.8);">Macintosh HD</h5>
+            <h5 style="top: 71%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 50px)">序列号</h5>
+            <h5 style="top: 71%; color: rgba(0, 0, 0, 0.8);">CCSTDMAC2019</h5>
+            <h5 style="top: 75%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 55px)">macOS</h5>
+            <h5 style="top: 75%; color: rgba(0, 0, 0, 0.8);">Sonoma 14.3.1</h5>
+            <h5
+                style="text-align: center; top: 87.5%; left: 50%; color: rgba(0, 0, 0, 0.6); transform: translate(-50%, -50%); width: 100%; height: auto; ">
+                &trade;和&copy; 1983-2024 Apple Inc.<br>保留一切权利。</h5>
+        </div>
         <div id="apple-menu">
             <div class="h4-div" id="app-menu h4-div">
                 <div id="control">
@@ -192,31 +180,6 @@
                     <h4 onclick="BackLogon()" style="margin: 0; margin-top: 4px;"> 退出登录 “User”...</h4>
                 </div>
             </div>
-        </div>
-        <div id="hardware">
-            <div id="win-tool" style="margin-top: 8px; margin-left: 8px;">
-                <div id="close" onclick="exit('hardware')"></div>
-                <div id="none" style="margin: 0;"></div>
-                <div id="none"></div>
-            </div>
-            <img src="./images/com.apple.macpro-2019 2.png" alt="macpro-2019" />
-            <h2>Mac Pro</h2>
-            <h5 style="margin-top: 20px; color: rgba(0, 0, 0, 0.7);" class="year">2019</h5>
-            <h5 style="top: 55%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 50px)">处理器</h5>
-            <h5 style="top: 55%; color: rgba(0, 0, 0, 0.8);">2.5GHz 二十八核Intel Xeon W</h5>
-            <h5 style="top: 59%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 50px)">图形卡</h5>
-            <h5 style="top: 59%; color: rgba(0, 0, 0, 0.8);">AMD Radeon Pro W6600X</h5>
-            <h5 style="top: 63%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 40px)">内存</h5>
-            <h5 style="top: 63%; color: rgba(0, 0, 0, 0.8);">1.5 TB 2933MHz DIMM</h5>
-            <h5 style="top: 67%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 60px)">启动磁盘</h5>
-            <h5 style="top: 67%; color: rgba(0, 0, 0, 0.8);">Macintosh HD</h5>
-            <h5 style="top: 71%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 50px)">序列号</h5>
-            <h5 style="top: 71%; color: rgba(0, 0, 0, 0.8);">CCSTDMAC2019</h5>
-            <h5 style="top: 75%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 55px)">macOS</h5>
-            <h5 style="top: 75%; color: rgba(0, 0, 0, 0.8);">Sonoma 14.3.1</h5>
-            <h5
-                style="text-align: center; top: 87.5%; left: 50%; color: rgba(0, 0, 0, 0.6); transform: translate(-50%, -50%); width: 100%; height: auto; ">
-                &trade;和&copy; 1983-2024 Apple Inc.<br>保留一切权利。</h5>
         </div>
         <div id="lp-bg">
             <div id="launchpad">
@@ -303,15 +266,23 @@
                 </div>
             </div>
         </div>
+        <div id="alert-window">
+            <img src="./images/codecrafter-tl.jpg" />
+            <p id="title">Welcome to this site</p>
+            <p id="des">This webpage is an HTML page<br>that mimics the macOS interface</p>
+            <div id="btn" onclick="exit('#alert-window')">
+                <p onclick="exit('#alert-window')">View now</p>
+            </div>
+        </div>
         <div class="finder" id="finder">
             <div id="sidebar"></div>
             <div id="edge"></div>
             <div id="content"></div>
             <div id="toolbar">
                 <div id="win-tool">
-                    <div id="close" onclick="exit('finder')"></div>
+                    <div id="close" onclick='exit("#finder")'></div>
                     <div id="minimize" onclick="small('finder')"></div>
-                    <div id="zoom" onclick="big('finder')"></div>
+                    <div id="zoom" onclick='big("finder")'></div>
                 </div>
                 <div id="toolbar-right-content">
                     <div id="back-for-ward">
@@ -330,11 +301,17 @@
         </div>
         <div id="safari-window">
             <div id="safari-topbar">
-                <div id="win-tool" style="top: 10px; left: 10px">
-                    <div id="close" onclick='exit("safari-window")'></div>
+                <div id="win-tool">
+                    <div id="close" onclick='exit("#safari-window")'></div>
                     <div id="minimize" onclick="small('safari-window')"></div>
                     <div id="zoom" onclick='big("safari-window")'></div>
                 </div>
+                <div id="page-using">
+                    <img src="./images/chevron.backward.png" style="margin-right: 8px; width: 13px; height: 16px" />
+                    <img src="./images/chevron.forward.png" style="width: 13px; height: 16px" />
+                </div>
+                <div id="page-tool"></div>
+                <img src="./images/plus@10x.png" width="20" height="20" />
             </div>
             <iframe id="main-safari" src="https://codecrafter-tl.github.io" title="CodeCrafter">
             </iframe>
@@ -342,33 +319,32 @@
         <div id="settings">
             <div id="sidebar">
                 <div id="win-tool" style="top: 10px; left: 10px">
-                    <div id="close" onclick='exit("settings")'></div>
+                    <div id="close" onclick='exit("#settings")'></div>
                     <div id="minimize" onclick="small('settings')"></div>
                     <div id="zoom" onclick='big("settings")'></div>
                 </div>
             </div>
             <div id="divider-edge"></div>
             <div id="main">
-                <button id="button" onclick="change_wallpaper()">Change!</button>
-            </div>
-        </div>
-        <div id="alert-window">
-            <img src="./images/codecrafter-tl.jpg" />
-            <p id="title">Welcome to this site</p>
-            <p id="des">This webpage is an HTML page<br>that mimics the macOS interface</p>
-            <div id="btn" onclick="exit('alert-window')">
-                <p onclick="exit('alert-window')">View now</p>
+                <section id="content-frame">
+                    <p id="sub-title">壁纸</p>
+                    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                        <div id="btn" onclick="change_wall('bigsur')">Big Sur</div>
+                        <div id="btn" onclick="change_wall('monterey')">Monterey</div>
+                        <div id="btn" onclick="change_wall('ventura')">Ventura</div>
+                        <div id="btn" onclick="change_wall('sonoma')">Sonoma</div>
+                        <div id="btn" onclick="change_wall('sequoia')">Sequoia Preview</div>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
-    <script>
-        function $$(id) {
-            return document.getElementById(id);
-        }
 
-        function call_style(app, key, value) {
-            app.style[key] = value;
-        }
+
+    <script src="./script/script.js"></script>
+    <script src="./script/app.js"></script>
+    <script src="./script/dock.js"></script>
+    <script>
 
         let lp_status = false;
         let fd_status = false;
@@ -390,202 +366,18 @@
         let alert_win = $$('alert-window');
         let alert_button = $$('btn');
         let right_menu = $$('contextmenu');
-
-        document.addEventListener("contextmenu", function (e) {
-            e.preventDefault();
-            bg.addEventListener("contextmenu", function (e) {
-                right_menu.style.display = `inline-flex`;
-                right_menu.style.opacity = 1;
-                right_menu.style.top = `${e.clientY}px`;
-                right_menu.style.left = `${e.clientX}px`;
-            });
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const icons = document.querySelectorAll("#dock img");
-            const appName = document.createElement("div");
-            const Backdrop = document.querySelectorAll("#dock .icons #backdrop");
-            appName.id = "app-name";
-            document.body.appendChild(appName);
-
-            icons.forEach(icon => {
-                icon.addEventListener("mouseover", function (event) {
-                    const appNameText = event.target.alt;
-                    const iconRect = event.target.getBoundingClientRect();
-                    appName.textContent = appNameText;
-                    appName.style.top = `${iconRect.top - appName.offsetHeight}px`;
-                    appName.style.left = `${iconRect.left + iconRect.width / 2}px`;
-                    appName.style.display = "block";
-                });
-
-                icon.addEventListener("mouseout", function () {
-                    appName.style.display = "none";
-                });
-            });
-        });
-
-        function exit(app) {
-            let a = $$(app);
-            a.parentElement.removeChild(a);
-        }
-
-        function small(app) {
-            let this_app = $$(app);
-        }
-
-        function big(app) {
-            let a = $$(app);
-            a.style.borderRadius = `none`;
-            be_big = true;
-        }
-
-        function change_wallpaper() { }
-
-        function OpenApp(img) {
-            let altText = img.alt
-            if (altText == '访达') {
-                if (fd_status == false) {
-                    fd.style.opacity = 1;
-                    fd.style.zIndex = 2;
-                    fd_status = true;
-                } else {
-                    return
-                }
-            } else if (altText == '启动台') {
-                if (lp_status == false) {
-                    lp_bg.style.opacity = 1
-                    lp_bg.animation = 'opacityBegin 0.3s ease-in-out forwards'
-                    lp_bg.style.zIndex = 2
-                    lp_bg.style.backgroundImage = `url(./images/Sonoma-Day.png)`;
-                    dock.style.zIndex = 3
-                    topbar.style.animation = 'opacityBack 0.2s ease-in-out forwards'
-                    lp.style.animation = 'LaunchPadBegin 0.3s ease-in-out forwards'
-                    lp_status = true
-                } else {
-                    lp.style.animation = 'LaunchPadBack 0.3s ease-in-out forwards'
-                    lp_bg.style.backgroundImage = `none`;
-                    lp_bg.animation = 'opacityBack 0.3s ease-in-out forwards'
-                    topbar.style.animation = 'opacityBegin 0.2s ease-in-out forwards'
-                    setTimeout(function () {
-                        lp_bg.style.zIndex = 0;
-                        dock.style.zIndex = 2;
-                    }, 300)
-                    lp_status = false
-                }
-            } else if (altText == 'Safari浏览器') {
-                safari.style.opacity = 1
-                safari.style.zIndex = 1
-            } else {
-                alert('您打开了应用程序：' + altText)
-            }
-        }
-
-        function Show_AppleMenu() {
-            if (menu == false) {
-                apple_menu.style.opacity = 1
-                apple_menu.style.zIndex = 2
-                h4div.style.opacity = 1
-                menu = true
-            } else {
-                apple_menu.style.animation = `opacityBack 0.125s forwards ease-in-out`;
-                h4div.style.animation = `opacityBack 0.125s forwards ease-in-out`;
-                setTimeout(function () {
-                    apple_menu.style.zIndex = -0.5;
-                    menu = false;
-                }, 500)
-            }
-        }
-
-        function AboutHardWare() {
-            apple_menu.style.opacity = 0
-            hardware.style.opacity = 1
-        }
-
-        function updateTime() {
-            let now = new Date();
-            let hours = now.getHours().toString().padStart(2, '0');
-            let minutes = now.getMinutes().toString().padStart(2, '0');
-            let timeString = hours + ':' + minutes;
-            let dayOfWeek = now.getDay();
-            let days = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
-            let dayName = days[dayOfWeek];
-            const options = { month: 'numeric', day: 'numeric' };
-            const date = now.toLocaleDateString('zh-CN', options);
-            document.getElementById('Time').textContent = timeString;
-            document.getElementById('Zhou').textContent = dayName;
-            document.getElementById('Date').textContent = date.replace(/\//g, '月') + '日';
-        }
+        let window_server = $$('window-server');
+        let settings = $$('settings');
 
         setInterval(updateTime, 400);
 
         updateTime();
 
-        function Sleep() {
-            body.children.style.opacity = 0;
-            body.style.backgroundImage = 'none'
-            body.style.backgroundColor = '#000'
-            document.addEventListener('mousemove', function (e) {
-                topbar.style.opacity = 1
-                apple_menu.style.opacity = 1
-                dock.style.opacity = 1
-                body.style.backgroundImage = 'url(./images/macOS 13 Ventura White.jpg)'
-            })
-        }
-
-        function OpenMenu(menu) {
-            alert('您点击了菜单项目：' + menu.textContent.replace('...', ''))
-        }
-
-        function Reset() {
-            setTimeout(function () { dock.style.animation = 'DockBack 0.75s forwards ease-in-out' }, 500)
-            topbar.style.opacity = 0
-            apple_menu.style.opacity = 0
-            setTimeout(function () { body.style.backgroundColor = '#000' }, 1500)
-            setTimeout(function () { window.location = './index.html' }, 3000)
-        }
-
-        function Shutdown() {
-            setTimeout(function () { dock.style.animation = 'DockBack 0.75s forwards ease-in-out' }, 500)
-            topbar.style.opacity = 0
-            apple_menu.style.opacity = 0
-            setTimeout(function () { window.location = 'about:blank' }, 2000)
-        }
-
-        function BackLogon() {
-            setTimeout(function () { dock.style.animation = 'DockBack 0.75s forwards ease-in-out' }, 500)
-            topbar.style.opacity = 0
-            apple_menu.style.opacity = 0
-            setTimeout(function () { window.location = './logon.html' }, 2000)
-        }
-
-        function makeDraggable(element) {
-            let isDragging = false;
-            let offsetX, offsetY;
-
-            element.addEventListener('mousedown', (e) => {
-                isDragging = true;
-                offsetX = e.clientX - element.getBoundingClientRect().left;
-                offsetY = e.clientY - element.getBoundingClientRect().top;
-                element.style.position = 'absolute';
-                element.style.zIndex = 1000;
-            });
-
-            document.addEventListener('mousemove', (e) => {
-                if (isDragging) {
-                    element.style.left = `${e.clientX}px`;
-                    element.style.top = `${e.clientY - offsetY}px`;
-                }
-            });
-
-            document.addEventListener('mouseup', () => {
-                isDragging = false;
-            });
-        }
-
         document.addEventListener("DOMContentLoaded", function () {
             makeDraggable($$('hardware'));
             makeDraggable($$('safari-window'));
             makeDraggable($$('settings'));
+            makeDraggable($$('finder'));
         });
     </script>
 </body>

@@ -13,7 +13,6 @@
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     border: 0.4px solid rgba(255, 255, 255, 0.3);
     color: #000;
-    z-index: 1;
 }
 
 #hardware img {
@@ -53,11 +52,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: none;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: background-image 20s ease-in-out;
 }
 
 #launchpad {
@@ -137,6 +131,23 @@
     height: 8%;
     border-radius: 16px 16px 0 0;
     background-color: #f6f6f5;
+    display: flex;
+    flex-direction: row;
+}
+
+#page-using {
+    display: inline-flex;
+    flex-direction: row;
+    margin-left: 14px;
+    filter: invert(1);
+    height: auto;
+    margin-top: 20px;
+    margin-left: 14px;
+}
+
+#page-tool {
+    display: inline-flex;
+    flex-direction: row;
 }
 
 #main-safari {
@@ -147,7 +158,6 @@
 }
 
 #settings {
-    background-color: #FFFFFF;
     box-shadow: 0px 36px 100px rgba(0, 0, 0, 0.45);
     border-radius: 10px;
     width: 715px;
@@ -161,12 +171,14 @@
 }
 
 #settings #sidebar {
-    background-color: rgba(246, 246, 246, 0.84);
+    background-color: rgba(246, 246, 246, 0.64);
     border-radius: 10px 0 0 10px;
     width: 214px;
     height: 100%;
     display: flex;
     flex-direction: column;
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
 }
 
 #settings #divider-edge {
@@ -180,5 +192,37 @@
     background-color: #FFFFFF;
     border-radius: 0 10px 10px 0;
     width: 501px;
-    height: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 20px 0 20px;
+}
+
+#settings #main #content-frame {
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 6px;
+    width: 461px;
+    height: 38px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px;
+}
+
+#settings #main #content-frame #btn {
+    background-image: linear-gradient(179deg, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.00) 96%), linear-gradient(to bottom right, #2277ff, #0c61ff);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-right: 7.5px;
+    font-size: 13px;
+    box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.12), 0 1px 2px 0 rgba(255, 255, 255, 0.12), 0 0 1px 0 rgba(255, 255, 255, 0.24);
 }
