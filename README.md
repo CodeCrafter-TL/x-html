@@ -35,7 +35,7 @@
 ![界面](/docs/a1d6f3f493c9a08268a1ace2c2b3fcd6.png)
 
 #### 登录密码
-##### "Ventura"或是"Sonoma"。
+##### "Ventura"、"Sonoma"或是"Sequoia"。
 
 6. 开机
 
