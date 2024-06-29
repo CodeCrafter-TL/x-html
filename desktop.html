@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="./css/apps.css" />
     <link rel="stylesheet" href="./css/ui.css" />
     <link rel="stylesheet" href="./css/finder.css" />
+
     <link rel="icon" href="./images/AppleInternalIcon 2.png" />
     <meta charset="utf-8" />
 </head>
 
-<body id="body">
+<body id="body" onload="change_wall('auto');">
     <section id="bg">
         <div id="contextmenu">
             <div class="h4-div" id="ct-menu h4-div">
@@ -35,17 +36,17 @@
                     <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 使用叠放</h4>
                 </div>
                 <div id="control">
-                    <h4 onclick="Sleep()" style="margin: 0; margin-top: 4px;"> 排序方式</h4>
+                    <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 排序方式</h4>
                 </div>
                 <div id="control">
-                    <h4 onclick="Reset()" style="margin: 0; margin-top: 4px;"> 整理</h4>
+                    <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 整理</h4>
                 </div>
                 <div id="control">
-                    <h4 onclick="Shutdown()" style="margin: 0; margin-top: 4px;"> 整理方式</h4>
+                    <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 整理方式</h4>
                 </div>
                 <hr>
                 <div id="control">
-                    <h4 onclick="BackLogon()" style="margin: 0; margin-top: 4px;"> 查看显示选项</h4>
+                    <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 查看显示选项</h4>
                 </div>
             </div>
         </div>
@@ -53,52 +54,55 @@
     <main id="desktop">
         <footer id="dock">
             <div class="icns" id="icns">
-                <div id="AppIcon"><img src="./images/Finder 2.png" alt="访达" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/finder.svg" alt="访达" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/AppIcon 104.png" alt="启动台" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/launchpad.svg" alt="启动台" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/safari-14-96x96_2x.png" alt="Safari浏览器" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/safari.svg" alt="Safari浏览器" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/AppIcon 106.png" alt="信息" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/message.svg" alt="信息" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/ApplicationIcon 2.png" alt="邮件" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/mail.svg" alt="邮件" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/AppIcon 110.png" alt="地图" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/map.svg" alt="地图" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/AppIcon 107.png" alt="照片" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/photo.svg" alt="照片" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/AppIcon 112.png" alt="FaceTime通话" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/facetime.svg" alt="FaceTime通话" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/App 2.png" alt="日历" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/date.svg" alt="日历" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/Contacts 2.png" alt="联系人" onclick="OpenApp(this)"
-                        style="transform: scaleX(-1);" />
+                <div id="AppIcon"><img src="./icons/people.svg" alt="联系人" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/AppIcon 103.png" alt="提醒事项" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/things.svg" alt="提醒事项" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/AppIcon 139.png" alt="备忘录" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/note.svg" alt="备忘录" onclick="OpenApp(this)" />
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon.png" alt="无边记" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/AppIcon 132.png" alt="视频" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/tv.svg" alt="视频" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/AppIcon 145.png" alt="音乐" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/music.svg" alt="音乐" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/AppIcon 133.png" alt="播客" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/fm.svg" alt="播客" onclick="OpenApp(this)" />
                 </div>
                 <div id="AppIcon"><img src="./images/AppIcon 102.png" alt="App Store" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/SystemPrefApp 2.png" alt="系统设置" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./icons/settings.svg" alt="系统设置" onclick="OpenApp(this)" />
                 </div>
                 <hr>
-                <div id="AppIcon"><img src="./images/TrashIcon 2.png" alt="废纸篓" onclick="OpenApp(this)" />
+                <div id="AppIcon"><img src="./images/downloads.png" alt="下载" onclick="OpenApp(this)" width="64"
+                        height="64" />
+                </div>
+                <div id="AppIcon"><img src="./icons/trash-full.svg" alt="废纸篓" onclick="OpenApp(this)" />
                 </div>
             </div>
         </footer>
         <header id="topbar">
             <section id="menu">
-                <img src="./images/AppleInternalIcon 2.png" style="width: auto; height: 85%; margin-left: 0.8%;"
-                    onclick="Show_AppleMenu()" />
+                <div style="font-size: 22px; margin-left: 5px;" onclick="Show_AppleMenu()">
+                    <h4></h4>
+                </div>
                 <h4 style="margin-left: 2%; font-weight: bold;" id="menu1">访达</h4>
                 <h4 style="margin-left: 2%;" id="menu2" onclick="OpenMenu(this)">文件</h4>
                 <h4 style="margin-left: 2%;" id="menu3" onclick="OpenMenu(this)">编辑</h4>
@@ -111,10 +115,6 @@
                 <h4 style="margin-right: 2%;" id="Time" onclick="OpenMenu(this)">00:00</h4>
                 <h4 style="margin-right: 2%;" id="Zhou" onclick="OpenMenu(this)">周六</h4>
                 <h4 style="margin-right: 2%;" id="Date" onclick="OpenMenu(this)">4月22日</h4>
-                <img src="./images/controls.png" width="16px" height="16px" style="margin-right: 1.4%" />
-                <img src="./images/users.png" width="16px" height="16px" />
-                <img src="./images/search.png" width="16px" height="16px" />
-                <img src="./images/wifi.png" width="18px" height="16px" />
             </section>
         </header>
         <div id="hardware">
@@ -313,7 +313,7 @@
                 <div id="page-tool"></div>
                 <img src="./images/plus@10x.png" width="20" height="20" />
             </div>
-            <iframe id="main-safari" src="https://codecrafter-tl.github.io" title="CodeCrafter">
+            <iframe id="main-safari" src="https://ccstudio.top/" title="CodeCrafter">
             </iframe>
         </div>
         <div id="settings">
@@ -326,14 +326,43 @@
             </div>
             <div id="divider-edge"></div>
             <div id="main">
-                <section id="content-frame">
+                <div style="display: flex; flex-direction: row;">
+                    <img id="by-looking" src="./images/Sequoia-Day.jpg" width="160" height="90"
+                        style="border-radius: 8px; border: solid 3px white" />
+                    <div style="display: flex; flex-direction: column; justify-content: center;">
+                        <section id="content-frame" style="width: 305px; margin-top: 0;">
+                            <p id="wallpaper-looking">Sequoia</p>
+                            <div
+                                style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                                <div id="btn" onclick="change_wall('auto')">自动</div>
+                                <div id="btn" onclick="change_wall('day')">浅色</div>
+                                <div id="btn" onclick="change_wall('night')">深色</div>
+                            </div>
+                        </section>
+                        <section id="content-frame" style="width: 305px;">
+                            <p id="wallpaper-looking">显示为屏幕保护程序</p>
+                            <div
+                                style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                                <div id="btn">关闭</div>
+                            </div>
+                        </section>
+                        <section id="content-frame" style="width: 305px; margin-bottom: auto; margin-top: 0;">
+                            <p id="wallpaper-looking">在所有空间中显示</p>
+                            <div
+                                style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                                <div id="btn">开启</div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <section id="content-frame" style="margin-bottom: auto;">
                     <p id="sub-title">壁纸</p>
                     <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
                         <div id="btn" onclick="change_wall('bigsur')">Big Sur</div>
                         <div id="btn" onclick="change_wall('monterey')">Monterey</div>
                         <div id="btn" onclick="change_wall('ventura')">Ventura</div>
                         <div id="btn" onclick="change_wall('sonoma')">Sonoma</div>
-                        <div id="btn" onclick="change_wall('sequoia')">Sequoia Preview</div>
+                        <div id="btn" onclick="change_wall('sequoia')">Sequoia</div>
                     </div>
                 </section>
             </div>
@@ -368,10 +397,13 @@
         let right_menu = $$('contextmenu');
         let window_server = $$('window-server');
         let settings = $$('settings');
+        let wallpaperId = $$('wallpaper-looking');
+        let wallpaperLooking = $$('by-looking');
 
         setInterval(updateTime, 400);
 
         updateTime();
+        change_wall('auto');
 
         document.addEventListener("DOMContentLoaded", function () {
             makeDraggable($$('hardware'));
@@ -379,6 +411,7 @@
             makeDraggable($$('settings'));
             makeDraggable($$('finder'));
         });
+
     </script>
 </body>
 

@@ -45,14 +45,14 @@ function OpenApp(img) {
             safari.style.opacity = 1;
             safari.style.zIndex = 2;
         } else {
-            safari.style.opacity = 1;
-            safari.style.zIndex = 2;
             lp.style.animation = 'LaunchPadBack 0.3s ease-in-out forwards'
             lp_bg.animation = 'opacityBack 0.3s ease-in-out forwards'
             topbar.style.animation = 'opacityBegin 0.2s ease-in-out forwards'
             setTimeout(function () {
                 lp_bg.style.zIndex = 0;
             }, 300)
+            safari.style.opacity = 1;
+            safari.style.zIndex = 2;
             lp_status = false
         }
     } else if (altText == '系统设置') {
@@ -60,14 +60,14 @@ function OpenApp(img) {
             settings.style.opacity = 1;
             settings.style.zIndex = 2;
         } else {
-            settings.style.opacity = 1;
-            settings.style.zIndex = 2;
             lp.style.animation = 'LaunchPadBack 0.3s ease-in-out forwards'
             lp_bg.animation = 'opacityBack 0.3s ease-in-out forwards'
             topbar.style.animation = 'opacityBegin 0.2s ease-in-out forwards'
             setTimeout(function () {
                 lp_bg.style.zIndex = 0;
             }, 300)
+            settings.style.opacity = 1;
+            settings.style.zIndex = 2;
             lp_status = false
         }
     } else {

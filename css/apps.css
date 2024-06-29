@@ -194,6 +194,7 @@
     width: 501px;
     height: 550px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 20px 20px 0 20px;
 }
@@ -209,6 +210,19 @@
     justify-content: space-between;
     align-items: center;
     padding-left: 15px;
+    margin-top: 10px;
+}
+
+#settings #main #content-frame #menu {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15), 0 8px 15px 6px rgba(0, 0, 0, 0.18), inset 0 0 1px 0 rgba(255, 255, 255, 0.50);
+    background: rgba(246, 246, 246, 0.60);
+    border: 0.5px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    color: #000;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    z-index: 0.5;
+    opacity: 0;
 }
 
 #settings #main #content-frame #btn {
@@ -225,4 +239,20 @@
     margin-right: 7.5px;
     font-size: 13px;
     box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.12), 0 1px 2px 0 rgba(255, 255, 255, 0.12), 0 0 1px 0 rgba(255, 255, 255, 0.24);
+}
+
+#normal-btn {
+    background: #fff;
+    border: 0.5px solid rgba(0, 0, 0, 0.02);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.15), 0 1px 0 0 rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-right: 7.5px;
 }

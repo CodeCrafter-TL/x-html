@@ -59,6 +59,7 @@
 .icns #AppIcon img {
     width: 72px;
     height: 72px;
+    margin-bottom: 0;
 }
 
 .icns #AppIcon #noti {
@@ -126,10 +127,12 @@
     padding: 0.3%;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
-    background-color: rgba(230, 230, 230, 0.23);
+    background-color: rgba(230, 230, 230, 0.35);
     display: inline-flex;
     flex-direction: row;
     z-index: 2;
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.36);
 }
 
 #topbar #menu {
