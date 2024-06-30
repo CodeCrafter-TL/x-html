@@ -9,19 +9,19 @@
     <link rel="stylesheet" href="./css/apps.css" />
     <link rel="stylesheet" href="./css/ui.css" />
     <link rel="stylesheet" href="./css/finder.css" />
-
     <link rel="icon" href="./images/AppleInternalIcon 2.png" />
+
     <meta charset="utf-8" />
 </head>
 
-<body id="body" onload="change_wall('auto');">
+<body id="body">
     <section id="bg">
-        <div id="contextmenu">
+        <div id="contextmenu" class="contextmenu">
             <div class="h4-div" id="ct-menu h4-div">
                 <div id="control">
                     <h4 onclick="OpenMenu(this)" style="margin: 0;"> 新建文件夹</h4>
                 </div>
-                <hr>
+                <hr id="menu-hr">
                 <div id="control">
                     <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 显示简介</h4>
                 </div>
@@ -31,7 +31,7 @@
                 <div id="control">
                     <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 编辑小组件...</h4>
                 </div>
-                <hr>
+                <hr id="menu-hr">
                 <div id="control">
                     <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 使用叠放</h4>
                 </div>
@@ -44,7 +44,7 @@
                 <div id="control">
                     <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 整理方式</h4>
                 </div>
-                <hr>
+                <hr id="menu-hr">
                 <div id="control">
                     <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 查看显示选项</h4>
                 </div>
@@ -147,22 +147,22 @@
                 <div id="control">
                     <h4 onclick="AboutHardWare()" style="margin: 0;"> 关于本机</h4>
                 </div>
-                <hr>
+                <hr id="menu-hr">
                 <div id="control">
                     <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 系统设置...</h4>
                 </div>
                 <div id="control">
                     <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> App Store</h4>
                 </div>
-                <hr>
+                <hr id="menu-hr">
                 <div id="control">
                     <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 最近使用的项目</h4>
                 </div>
-                <hr>
+                <hr id="menu-hr">
                 <div id="control">
                     <h4 onclick="OpenMenu(this)" style="margin: 0; margin-top: 4px;"> 强制退出</h4>
                 </div>
-                <hr>
+                <hr id="menu-hr">
                 <div id="control">
                     <h4 onclick="Sleep()" style="margin: 0; margin-top: 4px;"> 睡眠</h4>
                 </div>
@@ -172,7 +172,7 @@
                 <div id="control">
                     <h4 onclick="Shutdown()" style="margin: 0; margin-top: 4px;"> 关机</h4>
                 </div>
-                <hr>
+                <hr id="menu-hr">
                 <div id="control">
                     <h4 onclick="BackLogon()" style="margin: 0; margin-top: 4px;"> 锁定屏幕</h4>
                 </div>
@@ -355,7 +355,7 @@
                         </section>
                     </div>
                 </div>
-                <section id="content-frame" style="margin-bottom: auto;">
+                <section id="content-frame">
                     <p id="sub-title">壁纸</p>
                     <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
                         <div id="btn" onclick="change_wall('bigsur')">Big Sur</div>
@@ -365,10 +365,15 @@
                         <div id="btn" onclick="change_wall('sequoia')">Sequoia</div>
                     </div>
                 </section>
+                <section id="content-frame">
+                    <p id="sub-title">自动隐藏和显示程序坞</p>
+                    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                        <div id="btn" onclick="setDock('hidden')" id="open-dock-hidden">开启</div>
+                    </div>
+                </section>
             </div>
         </div>
     </main>
-
 
     <script src="./script/script.js"></script>
     <script src="./script/app.js"></script>
@@ -399,11 +404,11 @@
         let settings = $$('settings');
         let wallpaperId = $$('wallpaper-looking');
         let wallpaperLooking = $$('by-looking');
+        let _backdrop = $$('backdrop');
 
         setInterval(updateTime, 400);
-
         updateTime();
-        change_wall('auto');
+        change_wall('auto'); // init (get time, get wallpaper)
 
         document.addEventListener("DOMContentLoaded", function () {
             makeDraggable($$('hardware'));

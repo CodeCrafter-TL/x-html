@@ -46,7 +46,7 @@
     padding: 5px;
     z-index: 3;
     width: auto;
-    animation: DockBegin 0.75s forwards ease-in-out;
+    animation: DockBegin 0.5s forwards ease-out;
 }
 
 .icns #AppIcon {
@@ -60,6 +60,7 @@
     width: 72px;
     height: 72px;
     margin-bottom: 0;
+    position: relative;
 }
 
 .icns #AppIcon #noti {
@@ -77,11 +78,15 @@
     opacity: 0;
 }
 
-.icons #backdrop {
+#backdrop {
     background: rgba(246, 246, 246, 0.36);
     border: 1px solid #1A1A1A;
     border-radius: 16px;
     position: absolute;
+    width: 72px;
+    height: 72px;
+    top: 0;
+    left: 0;
 }
 
 .icns hr {
@@ -243,13 +248,14 @@
     width: 204px;
 }
 
-#app-menu hr {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: rgba(0, 0, 0, 0.1);
+#menu-hr {
+    background-color: rgb(145, 145, 145);
     border: none;
-    width: 180px;
+    width: 92.5%;
     height: 1px;
-    margin: 0;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    border-radius: 1px;
 }
 
 #control {

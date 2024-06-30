@@ -168,4 +168,13 @@ document.addEventListener("contextmenu", function (e) {
         right_menu.style.top = `${e.clientY}px`;
         right_menu.style.left = `${e.clientX}px`;
     });
+    bg.addEventListener('click', function (e) {
+        let ClickedElement = e.target;
+        if (!ClickedElement.matches('.contextmenu')) {
+            right_menu.style.display = `none`;
+            right_menu.style.opacity = 0;
+            right_menu.style.top = `${e.clientY}px`;
+            right_menu.style.left = `${e.clientX}px`;
+        }
+    });
 });
