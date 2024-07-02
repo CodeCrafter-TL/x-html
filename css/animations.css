@@ -115,3 +115,25 @@
         left: -100%;
     }
 }
+
+@keyframes OpeningApp {
+    0% {
+        margin-bottom: 0;
+    }
+
+    25% {
+        margin-bottom: 100%;
+    }
+
+    50% {
+        margin-bottom: 0;
+    }
+
+    75% {
+        margin-bottom: 100%;
+    }
+
+    100% {
+        margin-bottom: 0;
+    }
+}

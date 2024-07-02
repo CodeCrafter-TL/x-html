@@ -16,11 +16,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/Sonoma-Day.png);
+    background-image: url(../images/Sequoia-Day.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     z-index: 1;
+    transition: 0.5s ease;
 }
 
 #dock {
@@ -45,12 +46,12 @@
     padding: 5px;
     z-index: 3;
     width: auto;
-    animation: DockBegin 0.75s forwards ease-in-out;
+    animation: DockBegin 0.5s forwards ease-out;
 }
 
 .icns #AppIcon {
     width: 72px;
-    height: 82px;
+    height: 77px;
     display: flex;
     flex-direction: column;
 }
@@ -58,6 +59,8 @@
 .icns #AppIcon img {
     width: 72px;
     height: 72px;
+    margin-bottom: 0;
+    position: relative;
 }
 
 .icns #AppIcon #noti {
@@ -66,18 +69,24 @@
 }
 
 .icons #AppIcon #light {
-    width: 4px;
-    height: 4px;
+    align-self: center;
+    justify-self: center;
+    max-width: 4px;
+    max-height: 4px;
     border-radius: 1px;
     background-color: #e6e6e6;
     opacity: 0;
 }
 
-.icons #backdrop {
+#backdrop {
     background: rgba(246, 246, 246, 0.36);
     border: 1px solid #1A1A1A;
     border-radius: 16px;
     position: absolute;
+    width: 72px;
+    height: 72px;
+    top: 0;
+    left: 0;
 }
 
 .icns hr {
@@ -123,10 +132,12 @@
     padding: 0.3%;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
-    background-color: rgba(230, 230, 230, 0.23);
+    background-color: rgba(230, 230, 230, 0.35);
     display: inline-flex;
     flex-direction: row;
     z-index: 2;
+    color: #fff;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.36);
 }
 
 #topbar #menu {
@@ -237,13 +248,14 @@
     width: 204px;
 }
 
-#app-menu hr {
-    background-color: rgba(0, 0, 0, 0.1);
-    color: rgba(0, 0, 0, 0.1);
+#menu-hr {
+    background-color: rgb(145, 145, 145);
     border: none;
-    width: 180px;
+    width: 92.5%;
     height: 1px;
-    margin: 0;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+    border-radius: 1px;
 }
 
 #control {
@@ -276,7 +288,7 @@
     left: calc(50% - 130px);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
-    z-index: 2;
+    z-index: 3;
     opacity: 0;
     animation: Alert 0.5s forwards ease-in-out, opacityBegin 0.525s forwards ease-in-out;
     animation-delay: 0.75s;

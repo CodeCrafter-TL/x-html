@@ -2,6 +2,8 @@ body {
     height: 100vh;
     font-family: -apple-system, 'PingFangSC-Regular', sans-serif;
     overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 h4:hover {
