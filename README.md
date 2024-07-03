@@ -1,6 +1,28 @@
-# X-HTML
+> [!IMPORTANT]  
+> 由于本项目的命名问题，原版本号 `6.3.0` 已不符合正常版本命名规则，故本项目目前版本号改为 `7.0.2.20240703_alpha`。
 
-一个使用`html`超文本标记语言开发的复刻macOS界面的页面。
+<h1 align="center">Webintosh</h1>
+
+<p align="center">
+<code>Webintosh</code> 是一个基于 <code>html</code> 的仿macOS项目。
+<br/>
+</p>
+
+<p align="center">
+<a href="https://github.com/CodeCrafter-TL/x-html/releases"><img alt="Version" src="https://img.shields.io/github/v/release/CodeCrafter-TL/x-html?include_prereleases&logo=github&label=Version" title="Latest Version" /></a>
+<a href="https://github.com/CodeCrafter-TL/x-html"><img alt="Size" src="https://img.shields.io/github/languages/code-size/CodeCrafter-TL/x-html?label=Size&logo=github" title="Code Size"/></a>
+<br/>
+<a href="https://github.com/CodeCrafter-TL/x-html/watchers"><img alt="Watchers" src="https://img.shields.io/github/watchers/CodeCrafter-TL/x-html?label=Watchers&logo=github&style=flat" title="Watchers" /></a>
+<a href="https://github.com/CodeCrafter-TL/x-html/forks"><img alt="Forks" src="https://img.shields.io/github/forks/CodeCrafter-TL/x-html?label=Forks&logo=github&style=flat" title="Forks" /></a>
+<a href="https://github.com/CodeCrafter-TL/x-html/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/CodeCrafter-TL/x-html?label=Stars&color=gold&logo=github&style=flat" title="Stars" /></a>
+<a href="https://github.com/CodeCrafter-TL/x-html/issues"><img alt="Issues" src="https://img.shields.io/github/issues/CodeCrafter-TL/x-html?label=Issues&logo=github" title="Issues" /></a>
+<a href="https://github.com/CodeCrafter-TL/x-html/pulls"><img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/CodeCrafter-TL/x-html?label=Pull%20Requests&logo=github" title="Pull Requests" /></a>
+<a href="https://github.com/CodeCrafter-TL/x-html/discussions"><img alt="Discussions" src="https://img.shields.io/github/discussions/CodeCrafter-TL/x-html?label=Discussions&logo=github" title="Discussions" /></a>
+</p>
+
+<p align="center">
+<a href="https://github.com/CodeCrafter-TL/x-html/pulse"><img alt="Insights" src="https://repobeats.axiom.co/api/embed/8e58e35d5a43799119e46482ce6f7f09b3f76373.svg" /></a>
+</p>
 
 <p align="center">
     <a href="https://star-history.com/#CodeCrafter-TL/x-html&Date">
@@ -12,39 +34,17 @@
     </a>
 </p>
 
-### 目前还原
+📦 使用
+----------------------
 
-1. 启动台
+### ✅ 版本
 
-![启动台效果](/docs/7178ac3093c0586a4a3307e75e82dbc5.png)
+* 🔖 最新版本 : `7.0.2.20240703_alpha`
+* 🕓 发布日期 : 2024-07-03
 
-2. 测试窗口
+[现在开始使用](https://codecrafter-tl.github.io/x-html)
 
-![窗口测试](/docs/1aba74bffe1ca5e83421e0cb6c2ce1ca.png)
+[现在开始使用 (镜像源)](https://os.ccstudio.top)
 
-3. 访达栏
-
-![效果](/docs/61be7518d9a20bcee4703f06ecd79ac0.png)
-
-4. Dock
-
-![效果](/docs/254899096110b22a1834f99a01952417.png)
-
-5. 锁屏界面
-
-![界面](/docs/a1d6f3f493c9a08268a1ace2c2b3fcd6.png)
-
-#### 登录密码
-##### "Ventura"、"Sonoma"或是"Sequoia"。
-
-6. 开机
-
-![禁行](/docs/d8df205d843add0188f3da6d397ce4ad.png)![开机](/docs/2f2e16f7e67f2cedd3ab68dc5a6730cd.png)
-
-7. 弹窗
-
-![alert](/docs/fe465bda5e44310dc83be769a8b973b0.png)
-
-8.  Apple 菜单
-
-![apple menu](/docs/dcc7840aa99b7df78b3235f04ab67a82.png)
+[现在开始使用 (备用镜像源)](https://mac.ccstudio.top:3333)
+* （镜像源也许有意想不到的问题，建议使用原本的[GitHub Pages](https://codecrafter-tl.github.io/x-html)。
