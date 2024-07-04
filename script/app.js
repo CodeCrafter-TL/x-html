@@ -27,7 +27,7 @@ function OpenApp(img) {
         if (lp_status == false) {
             lp_bg.style.opacity = 1
             lp_bg.animation = 'opacityBegin 0.3s ease-in-out forwards'
-            lp_bg.style.zIndex = 2
+            lp_bg.style.zIndex = 4;
             topbar.style.animation = 'opacityBack 0.2s ease-in-out forwards'
             lp.style.animation = 'LaunchPadBegin 0.3s ease-in-out forwards'
             lp_status = true
@@ -38,7 +38,7 @@ function OpenApp(img) {
             setTimeout(function () {
                 lp_bg.style.zIndex = 0;
             }, 300)
-            lp_status = false
+            lp_status = false;
         }
     } else if (altText == 'Safari浏览器') {
         if (lp_status == false) {
@@ -78,6 +78,7 @@ function OpenApp(img) {
 function AboutHardWare() {
     apple_menu.style.animation = `opacityBack 0.125s ease-in-out`;
     h4div.style.animation = `opacityBack 0.125s ease-in-out`;
+    appleFrame.style.backgroundColor = `rgba(255, 255, 255, 0)`
     setTimeout(function () {
         apple_menu.style.zIndex = -0.5;
         apple_menu.style.opacity = 0;
@@ -89,5 +90,3 @@ function AboutHardWare() {
     hardware.style.opacity = 1;
     hardware.style.zIndex = 2;
 }
-
-function change_switch(svg) { }

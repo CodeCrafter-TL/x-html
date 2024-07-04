@@ -30,7 +30,7 @@
     justify-content: center;
     margin-bottom: 8px;
     width: 100%;
-    height: auto;
+    height: 80px;
 }
 
 .icns {
@@ -39,26 +39,26 @@
     align-items: center;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
-    border-radius: 30px;
+    border-radius: 24px;
     box-shadow: 0px 36px 100px rgba(0, 0, 0, 0.45);
     border: 0.4px solid rgba(255, 255, 255, 0.2);
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.425);
     padding: 5px;
-    z-index: 3;
+    z-index: 5;
     width: auto;
     animation: DockBegin 0.5s forwards ease-out;
 }
 
 .icns #AppIcon {
-    width: 72px;
-    height: 77px;
+    width: 64px;
+    height: 69px;
     display: flex;
     flex-direction: column;
 }
 
 .icns #AppIcon img {
-    width: 72px;
-    height: 72px;
+    width: 64px;
+    height: 64px;
     margin-bottom: 0;
     position: relative;
 }
@@ -76,17 +76,6 @@
     border-radius: 1px;
     background-color: #e6e6e6;
     opacity: 0;
-}
-
-#backdrop {
-    background: rgba(246, 246, 246, 0.36);
-    border: 1px solid #1A1A1A;
-    border-radius: 16px;
-    position: absolute;
-    width: 72px;
-    height: 72px;
-    top: 0;
-    left: 0;
 }
 
 .icns hr {
@@ -112,15 +101,8 @@
     box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
-    z-index: 2;
-}
-
-#overlay {
-    border-radius: 26px;
-    background-color: rgba(0, 0, 0, 0.45);
-    width: 72px;
-    height: 72px;
-    display: none;
+    z-index: 5;
+    font-size: 13px;
 }
 
 #topbar {

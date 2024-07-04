@@ -88,10 +88,12 @@ function Show_AppleMenu() {
         apple_menu.style.opacity = 1
         apple_menu.style.zIndex = 2
         h4div.style.opacity = 1
+        appleFrame.style.backgroundColor = `rgba(255, 255, 255, 0.5)`
         menu = true
     } else {
         apple_menu.style.animation = `opacityBack 0.125s ease-in-out`;
         h4div.style.animation = `opacityBack 0.125s ease-in-out`;
+        appleFrame.style.backgroundColor = `rgba(255, 255, 255, 0)`
         setTimeout(function () {
             apple_menu.style.zIndex = -0.5;
             apple_menu.style.opacity = 0;
@@ -134,7 +136,7 @@ function change_wall(wallpaper) {
     } else if (wallpaper == 'auto') {
         let now = new Date();
         let hours = now.getHours().toString().padStart(2, '0');
-        if (hours >= 18) {
+        if (hours >= 19) {
             wallpaper_now = wallpaper_now.replace("Day", "Night");
             bg.style.backgroundImage = `url(./images/${wallpaper_now}.jpg)`;
             wallpaperLooking.src = `./images/${wallpaper_now}.jpg`;

@@ -78,7 +78,8 @@
                 </div>
                 <div id="AppIcon"><img src="./icons/note.svg" alt="备忘录" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/AppIcon.png" alt="无边记" onclick="OpenApp(this)" />
+                <div id="AppIcon" style="padding: 0;"><img src="./images/AppIcon.png" alt="无边记"
+                        onclick="OpenApp(this)" />
                 </div>
                 <div id="AppIcon"><img src="./icons/tv.svg" alt="视频" onclick="OpenApp(this)" />
                 </div>
@@ -86,7 +87,8 @@
                 </div>
                 <div id="AppIcon"><img src="./icons/fm.svg" alt="播客" onclick="OpenApp(this)" />
                 </div>
-                <div id="AppIcon"><img src="./images/AppIcon 102.png" alt="App Store" onclick="OpenApp(this)" />
+                <div id="AppIcon" style="padding: 0;"><img src="./images/AppIcon 102.png" alt="App Store"
+                        onclick="OpenApp(this)" />
                 </div>
                 <div id="AppIcon"><img src="./icons/settings.svg" alt="系统设置" onclick="OpenApp(this)" />
                 </div>
@@ -100,7 +102,7 @@
         </footer>
         <header id="topbar">
             <section id="menu">
-                <div style="font-size: 22px; margin-left: 5px;" onclick="Show_AppleMenu()">
+                <div style="font-size: 22px; margin-left: 5px; padding-left: 7.5px; padding-right: 7.5px; border-radius: 5px;" onclick="Show_AppleMenu()" id="apple-frame">
                     <h4></h4>
                 </div>
                 <h4 style="margin-left: 2%; font-weight: bold;" id="menu1">访达</h4>
@@ -113,8 +115,8 @@
             </section>
             <section id="status">
                 <h4 style="margin-right: 2%;" id="Time" onclick="OpenMenu(this)">00:00</h4>
-                <h4 style="margin-right: 2%;" id="Zhou" onclick="OpenMenu(this)">周六</h4>
-                <h4 style="margin-right: 2%;" id="Date" onclick="OpenMenu(this)">4月22日</h4>
+                <h4 style="margin-right: 1.2%;" id="Zhou" onclick="OpenMenu(this)">周六</h4>
+                <h4 style="margin-right: 1.2%;" id="Date" onclick="OpenMenu(this)">4月22日</h4>
             </section>
         </header>
         <div id="hardware">
@@ -378,6 +380,7 @@
     <script src="./script/script.js"></script>
     <script src="./script/app.js"></script>
     <script src="./script/dock.js"></script>
+    
     <script>
 
         let lp_status = false;
@@ -405,6 +408,7 @@
         let wallpaperId = $$('wallpaper-looking');
         let wallpaperLooking = $$('by-looking');
         let _backdrop = $$('backdrop');
+        let appleFrame = $$('apple-frame');
 
         setInterval(updateTime, 400);
         updateTime();
