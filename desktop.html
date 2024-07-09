@@ -102,7 +102,8 @@
         </footer>
         <header id="topbar">
             <section id="menu">
-                <div style="font-size: 22px; margin-left: 5px; padding-left: 7.5px; padding-right: 7.5px; border-radius: 5px;" onclick="Show_AppleMenu()" id="apple-frame">
+                <div style="font-size: 22px; margin-left: 5px; padding-left: 7.5px; padding-right: 7.5px; border-radius: 5px;"
+                    onclick="Show_AppleMenu()" id="apple-frame">
                     <h4></h4>
                 </div>
                 <h4 style="margin-left: 2%; font-weight: bold;" id="menu1">访达</h4>
@@ -380,7 +381,7 @@
     <script src="./script/script.js"></script>
     <script src="./script/app.js"></script>
     <script src="./script/dock.js"></script>
-    
+
     <script>
 
         let lp_status = false;
@@ -415,7 +416,7 @@
         change_wall('auto'); // init (get time, get wallpaper)
 
         document.addEventListener("DOMContentLoaded", function () {
-            makeDraggable($$('hardware'));
+            makeDraggableHardWare($$('hardware'));
             makeDraggable($$('safari-window'));
             makeDraggable($$('settings'));
             makeDraggable($$('finder'));

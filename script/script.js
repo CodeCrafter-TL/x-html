@@ -30,6 +30,32 @@ function makeDraggable(element) {
     });
 }
 
+function makeDraggableHardWare(element) {
+    let isDragging = false;
+    let offsetX, offsetY;
+
+    element.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        offsetX = e.clientX - element.getBoundingClientRect().left;
+        offsetY = e.clientY - element.getBoundingClientRect().top;
+        element.style.zIndex = 2; // 设置 z-index 确保在拖动时在顶层
+
+        // 阻止默认事件，避免在拖动时选中文字或其他元素
+        e.preventDefault();
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+            element.style.left = `${e.clientX - offsetX}px`;
+            element.style.top = `${e.clientY - offsetY}px`;
+        }
+    });
+
+    document.addEventListener('mouseup', () => {
+        isDragging = false;
+    });
+}
+
 function OpenMenu(menu) {
     alert('您点击了菜单项目：' + menu.textContent.replace('...', ''))
 }
@@ -105,6 +131,16 @@ function Show_AppleMenu() {
     }
 }
 
+function setTopbar(color) {
+    if (color == 'white') {
+        topbar.style.color = '#fff';
+    } else if (color == 'black') {
+        topbar.style.color = '#000';
+    } else {
+        return
+    }
+}
+
 let wallpaper_now = 'Sequoia-Day';
 
 function change_wall(wallpaper) {
@@ -113,26 +149,31 @@ function change_wall(wallpaper) {
         wallpaper_now = 'BigSur-Day';
         wallpaperId.innerHTML = 'Big Sur';
         wallpaperLooking.src = `./images/BigSur-Day.jpg`;
+        setTopbar('black');
     } else if (wallpaper == 'monterey') {
         bg.style.backgroundImage = `url(./images/Monterey-Day.jpg)`;
         wallpaper_now = 'Monterey-Day';
         wallpaperId.innerHTML = 'Monterey';
         wallpaperLooking.src = `./images/Monterey-Day.jpg`;
+        setTopbar('black');
     } else if (wallpaper == 'ventura') {
         bg.style.backgroundImage = `url(./images/Ventura-Day.jpg)`;
         wallpaper_now = 'Ventura-Day';
         wallpaperId.innerHTML = 'Ventura';
         wallpaperLooking.src = `./images/Ventura-Day.jpg`;
+        setTopbar('black');
     } else if (wallpaper == 'sonoma') {
         bg.style.backgroundImage = `url(./images/Sonoma-Day..jpg)`;
         wallpaper_now = 'Sonoma-Day.';
         wallpaperId.innerHTML = 'Sonoma';
         wallpaperLooking.src = `./images/Sonoma-Day..jpg`;
+        setTopbar('white');
     } else if (wallpaper == 'sequoia') {
         bg.style.backgroundImage = `url(./images/Sequoia-Day.jpg)`;
         wallpaper_now = 'Sequoia-Day';
         wallpaperId.innerHTML = 'Sequoia';
         wallpaperLooking.src = `./images/Sequoia-Day.jpg`;
+        setTopbar('black');
     } else if (wallpaper == 'auto') {
         let now = new Date();
         let hours = now.getHours().toString().padStart(2, '0');
@@ -140,23 +181,36 @@ function change_wall(wallpaper) {
             wallpaper_now = wallpaper_now.replace("Day", "Night");
             bg.style.backgroundImage = `url(./images/${wallpaper_now}.jpg)`;
             wallpaperLooking.src = `./images/${wallpaper_now}.jpg`;
+            setTopbar('white');
         } else if (hours < 5) {
             wallpaper_now = wallpaper_now.replace("Day", "Night");
             bg.style.backgroundImage = `url(./images/${wallpaper_now}.jpg)`;
             wallpaperLooking.src = `./images/${wallpaper_now}.jpg`;
+            setTopbar('white');
         } else {
             wallpaper_now = wallpaper_now.replace("Night", "Day");
             bg.style.backgroundImage = `url(./images/${wallpaper_now}.jpg)`;
             wallpaperLooking.src = `./images/${wallpaper_now}.jpg`;
+            if (wallpaper_now == 'Sonoma-Day.') {
+                setTopbar('white');
+            } else {
+                setTopbar('black');
+            }
         }
     } else if (wallpaper == 'day') {
         wallpaper_now = wallpaper_now.replace("Night", "Day");
         bg.style.backgroundImage = `url(./images/${wallpaper_now}.jpg)`;
         wallpaperLooking.src = `./images/${wallpaper_now}.jpg`;
+        if (wallpaper_now == 'Sonoma-Day.') {
+            setTopbar('white');
+        } else {
+            setTopbar('black');
+        }
     } else if (wallpaper == 'night') {
         wallpaper_now = wallpaper_now.replace("Day", "Night");
         bg.style.backgroundImage = `url(./images/${wallpaper_now}.jpg)`;
         wallpaperLooking.src = `./images/${wallpaper_now}.jpg`;
+        setTopbar('white');
     } else {
         alert(`unknown wallpaper name or status: ${wallpaper}`);
     }

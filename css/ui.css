@@ -333,7 +333,7 @@
     display: inline-flex;
     flex-direction: column;
     position: absolute;
-    width: 100px;
+    width: 135px;
     height: auto;
     margin: 0;
     backdrop-filter: blur(50px);
