@@ -46,8 +46,8 @@ function makeDraggableHardWare(element) {
 
     document.addEventListener('mousemove', (e) => {
         if (isDragging) {
-            element.style.left = `${e.clientX - offsetX}px`;
-            element.style.top = `${e.clientY - offsetY}px`;
+            element.style.left = `${e.clientX - offsetX + element.offsetWidth / 2}px`;
+            element.style.top = `${e.clientY - offsetY + element.offsetHeight / 2}px`;
         }
     });
 
