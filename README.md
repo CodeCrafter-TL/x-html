@@ -1,6 +1,3 @@
-> [!IMPORTANT]  
-> 由于本项目的命名问题，原版本号 `6.3.0` 已不符合正常版本命名规则，故本项目目前版本号改为 `7.0.2.20240704_alpha`。
-
 <h1 align="center">Webintosh</h1>
 
 <p align="center">
