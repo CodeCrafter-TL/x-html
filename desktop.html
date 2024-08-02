@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
 
 <head>
     <title>macOS</title>
@@ -54,50 +54,27 @@
     <main id="desktop">
         <footer id="dock">
             <div class="icns" id="icns">
-                <div id="AppIcon"><img src="./icons/finder.svg" alt="访达" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/launchpad.svg" alt="启动台" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/safari.svg" alt="Safari浏览器" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/message.svg" alt="信息" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/mail.svg" alt="邮件" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/map.svg" alt="地图" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/photo.svg" alt="照片" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/facetime.svg" alt="FaceTime通话" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/date.svg" alt="日历" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/people.svg" alt="联系人" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/things.svg" alt="提醒事项" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/note.svg" alt="备忘录" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon" style="padding: 0;"><img src="./images/AppIcon.png" alt="无边记"
-                        onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/tv.svg" alt="视频" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/music.svg" alt="音乐" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/fm.svg" alt="播客" onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon" style="padding: 0;"><img src="./images/AppIcon 102.png" alt="App Store"
-                        onclick="OpenApp(this)" />
-                </div>
-                <div id="AppIcon"><img src="./icons/settings.svg" alt="系统设置" onclick="OpenApp(this)" />
-                </div>
+                <img src="./icons/finder.svg" alt="访达" onclick="OpenApp(this)" />
+                <img src="./icons/launchpad.svg" alt="启动台" onclick="OpenApp(this)" />
+                <img src="./icons/safari.svg" alt="Safari浏览器" onclick="OpenApp(this)" />
+                <img src="./icons/message.svg" alt="信息" onclick="OpenApp(this)" />
+                <img src="./icons/mail.svg" alt="邮件" onclick="OpenApp(this)" />
+                <img src="./icons/map.svg" alt="地图" onclick="OpenApp(this)" />
+                <img src="./icons/photo.svg" alt="照片" onclick="OpenApp(this)" />
+                <img src="./icons/facetime.svg" alt="FaceTime通话" onclick="OpenApp(this)" />
+                <img src="./icons/date.svg" alt="日历" onclick="OpenApp(this)" />
+                <img src="./icons/people.svg" alt="联系人" onclick="OpenApp(this)" />
+                <img src="./icons/things.svg" alt="提醒事项" onclick="OpenApp(this)" />
+                <img src="./icons/note.svg" alt="备忘录" onclick="OpenApp(this)" />
+                <img src="./images/AppIcon.png" alt="无边记" onclick="OpenApp(this)"/>
+                <img src="./icons/tv.svg" alt="视频" onclick="OpenApp(this)" />
+                <img src="./icons/music.svg" alt="音乐" onclick="OpenApp(this)" />
+                <img src="./icons/fm.svg" alt="播客" onclick="OpenApp(this)" />
+                <img src="./images/AppIcon 102.png" alt="App Store" onclick="OpenApp(this)"/>
+                <img src="./icons/settings.svg" alt="系统设置" onclick="OpenApp(this)" />
                 <hr>
-                <div id="AppIcon"><img src="./images/downloads.png" alt="下载" onclick="OpenApp(this)" width="64"
-                        height="64" />
-                </div>
-                <div id="AppIcon"><img src="./icons/trash-full.svg" alt="废纸篓" onclick="OpenApp(this)" />
-                </div>
+                <img src="./images/downloads.png" alt="下载" onclick="OpenApp(this)" width="64" height="64" />
+                <img src="./icons/trash-full.svg" alt="废纸篓" onclick="OpenApp(this)" />
             </div>
         </footer>
         <header id="topbar">
@@ -371,7 +348,14 @@
                 <section id="content-frame">
                     <p id="sub-title">自动隐藏和显示程序坞</p>
                     <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                        <div id="btn" onclick="setDock('hidden')" id="open-dock-hidden">开启</div>
+                        <div id="btn" onclick="setDock('hidden')" id="open-dock-hidden">点击开启</div>
+                    </div>
+                </section>
+                <section id="content-frame">
+                    <p id="sub-title">程序坞放大</p>
+                    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                        <div id="btn" onclick="setDockZoom(true)" id="open-dock-hidden">点击开启</div>
+                        <div id="btn" onclick="setDockZoom(false)" id="open-dock-hidden">点击关闭</div>
                     </div>
                 </section>
             </div>

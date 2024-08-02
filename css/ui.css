@@ -29,7 +29,7 @@
     flex-direction: row;
     justify-content: center;
     margin-bottom: 8px;
-    width: 100%;
+    width: auto;
     height: 80px;
 }
 
@@ -49,18 +49,12 @@
     animation: DockBegin 0.5s forwards ease-out;
 }
 
-.icns #AppIcon {
-    width: 64px;
-    height: 69px;
-    display: flex;
-    flex-direction: column;
-}
-
-.icns #AppIcon img {
+.icns img {
     width: 64px;
     height: 64px;
-    margin-bottom: 0;
-    position: relative;
+    transition: 0.275s ease-out;
+    transform-origin: bottom;
+    object-fit: cover;
 }
 
 .icns #AppIcon #noti {
@@ -364,4 +358,14 @@
     width: 90%;
     height: 1px;
     margin: 0;
+}
+
+#sys-dialog {
+    width: 420px;
+    height: 175px;
+    box-shadow: 0px 36px 100px rgba(0, 0, 0, 0.45);
+    border-radius: 10px;
+    position: absolute;
+    top: calc(50% - 87.5px);
+    left: calc(50% - 210px);
 }

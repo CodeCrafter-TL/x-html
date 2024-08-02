@@ -1,6 +1,5 @@
 body {
     height: 100vh;
-    font-family: -apple-system, 'PingFangSC-Regular', sans-serif;
     overflow: hidden;
     user-select: none;
     -webkit-user-select: none;
@@ -10,8 +9,12 @@ h4:hover {
     cursor: default;
 }
 
+* {
+    font-family: -apple-system, 'Apple';
+}
+
 @font-face {
-    font-family: 'PingFangSC-Regular';
+    font-family: 'Apple';
     src: url(../font/苹方黑体-准-简.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;

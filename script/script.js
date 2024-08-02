@@ -234,3 +234,16 @@ document.addEventListener("contextmenu", function (e) {
         }
     });
 });
+
+function loadStyleSheet(filename) {
+    filenameAll = `css/${filename}`;
+    link = document.createElement('link');
+    link.rel = "stylesheet";
+    link.href = filenameAll;
+    document.head.appendChild(link);
+    return link;
+}
+
+function removeStyleSheet(link) {
+    document.head.removeChild(link);
+}
