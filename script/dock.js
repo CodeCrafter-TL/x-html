@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const iconRect = event.target.getBoundingClientRect();
             appName.textContent = appNameText;
             appName.style.top = `${iconRect.top - appName.offsetHeight - icon.clientWidth / 8}px`;
-            appName.style.left = `${iconRect.left + iconRect.width / 2.5}px`;
+            appName.style.left = `${iconRect.left + iconRect.width / 2}px`;
             appName.style.display = "block";
         });
 

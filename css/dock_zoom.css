@@ -28,15 +28,41 @@
         margin: 0 5.75px;
     }
 
+    /* about hr */
+
     &:has(+ img + hr + img:hover),
     &:hover + hr + img {
         scale: 1.525;
         margin: 0 12.75px;
     }
 
+    &:has(+ img + hr + img + img:hover),
+    &:hover + img + hr + img {
+        scale: 1.35;
+        margin: 0 9px;
+    }
+
+    &:has(+ img + img + hr + img + img:hover),
+    &:hover + img + hr + img + img {
+        scale: 1.175;
+        margin: 0 5.75px;
+    }
+
+    &:has(+ img + hr + img + img + img:hover),
+    &:hover + img + img + hr + img {
+        scale: 1.175;
+        margin: 0 5.75px;
+    }
+
     &:has(+ img + img + hr + img:hover),
     &:hover + hr + img + img {
         scale: 1.35;
         margin: 0 9px;
+    }
+
+    &:has(+ img + img + img + hr + img:hover),
+    &:hover + hr + img + img + img {
+        scale: 1.175;
+        margin: 0 5.75px;
     }
 }
