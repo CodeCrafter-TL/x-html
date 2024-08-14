@@ -45,3 +45,5 @@
 
 [现在开始使用 (备用镜像源)](https://mac.ccstudio.top:3333)
 * （镜像源也许有意想不到的问题，建议使用原本的[GitHub Pages](https://codecrafter-tl.github.io/x-html)。
+  
+* **登录密码：Ventura Sonoma Sequoia 都可以！**
