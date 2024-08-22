@@ -170,11 +170,13 @@ function setTopbar(color) {
     }
 }
 
-let wallpaper_now = bg.style.backgroundImage.replace('./images/', '').replace('.jpg', '').replace('url(', '').replace(')', '');
+let wallpaper_now = 'Sequoia-Day';
 
 function change_wall(wallpaper) {
     let wallpaperId = $$('wallpaper-looking-new');
     let wallpaperLooking = $$('by-looking-new');
+    wallpaper = wallpaper.toLowerCase();
+    alert(wallpaper);
     if (wallpaper == 'bigsur') {
         bg.style.backgroundImage = `url(./images/BigSur-Day.jpg)`;
         wallpaper_now = 'BigSur-Day';
@@ -307,31 +309,23 @@ function theme(name) {
             window.apps.href = `./css/apps.css`;
             window.ui.href = `./css/ui.css`;
             window.finder.href = `./css/finder.css`;
-            return;
-        }
-        window.apps = loadStyleSheet('apps.css');
-        window.ui = loadStyleSheet('ui.css');
-        window.finder = loadStyleSheet('finder.css');
-        if (wallpaper_now.indexOf('Night') !== -1) {
-            change_wall(wallpaper_now.replace('Night', 'Day'));
         } else {
-            change_wall(wallpaper_now);
+            window.apps = loadStyleSheet('apps.css');
+            window.ui = loadStyleSheet('ui.css');
+            window.finder = loadStyleSheet('finder.css');
         }
+        wallpaperLooking.src = '../images/Sequoia-Day.jpg';
     } else {
         if (window.apps) {
             window.apps.href = `./css/dark/apps.css`;
             window.ui.href = `./css/dark/ui.css`;
             window.finder.href = `./css/dark/finder.css`;
-            return;
-        } 
-        window.apps = loadStyleSheet('dark/apps.css');
-        window.ui = loadStyleSheet('dark/ui.css');
-        window.finder = loadStyleSheet('dark/finder.css');
-        if (wallpaper_now.indexOf('Day') !== -1) {
-            change_wall(wallpaper_now.replace('Day', 'Night'));
         } else {
-            change_wall(wallpaper_now);
+            window.apps = loadStyleSheet('dark/apps.css');
+            window.ui = loadStyleSheet('dark/ui.css');
+            window.finder = loadStyleSheet('dark/finder.css');
         }
+        wallpaperLooking.src = '../images/Sequoia-Night.jpg';
     }
 }
 
