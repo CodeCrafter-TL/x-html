@@ -3,6 +3,7 @@ body {
     overflow: hidden;
     user-select: none;
     -webkit-user-select: none;
+    cursor: url('../images/cursor.png'), default;
 }
 
 h4:hover {

@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-let dockStatus
-let dockActive
+let dockStatus;
+let dockActive;
 
 function setDock(mode) {
     if (mode == 'hidden') {
@@ -34,38 +34,30 @@ function setDock(mode) {
             let dockHeight = dock.offsetHeight;
             if (mouseX >= 0 && mouseX <= dockWidth && mouseY >= 0 && mouseY <= dockHeight) {
                 dockActive = true;
+                return;
             } else if (document.body.scrollHeight - e.pageY <= 10) {
                 dock.style.animation = `none`;
                 dock.style.animation = `DockBegin 0.375s forwards ease-out`
+                dockActive = true;
+                return;
             } else {
                 dock.style.animation = `none`;
                 dock.style.animation = `DockBack 0.375s forwards ease-out`;
                 dockActive = false;
-                // alert(dockStatus && dockActive);
+                return;
             }
         });
-        // alert(dockStatus && dockActive);
-    } else if (mode == 'normal') {
-        if (dockActive) {
-            dock.style.animation = `none`;
-            dockStatus = mode;
-        } else {
-            dock.style.animation = `none`;
-            dock.style.animation = `DockBack 0.5s forwards ease-out`;
-            dockStatus = mode;
-        }
-    } else if (mode == 'show') {
-        dock.style.animation = 'DockBegin 0.5s forwards ease-out';
-        dock.style.animation = 'none';
+        return;
+    } else if (mode === 'show') {
         dockStatus = mode;
-    }
+        dock.style.animation = 'none';
 
-    if (!dockActive) {
-        dock.style.animation = `none`;
-        dock.style.animation = `DockBack 0.5s forwards ease-out`;
-        // alert(dockStatus && dockActive);
+        dock.style.animation = 'DockBegin 0.5s forwards ease-out';
+        return;
     }
+    return;
 }
+
 
 function setDockZoom(bool) {
     if (bool == true) {

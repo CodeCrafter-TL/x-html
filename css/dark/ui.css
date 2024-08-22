@@ -20,7 +20,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/Sequoia-Day.jpg);
+    background-image: url(../../images/Sequoia-Night.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -45,8 +45,8 @@
     -webkit-backdrop-filter: blur(50px);
     border-radius: 24px;
     box-shadow: 0px 36px 100px rgba(0, 0, 0, 0.45);
-    border: 0.4px solid rgba(255, 255, 255, 0.2);
-    background-color: rgba(255, 255, 255, 0.425);
+    border: 0.4px solid #1a1a1a7c;
+    background-color: rgba(28, 28, 28, 0.4);
     padding: 5px;
     padding-bottom: 10px;
     z-index: 1024;
@@ -78,7 +78,7 @@
 }
 
 .icns hr {
-    background: #E8E8E8;
+    background: #a8a8a8ac;
     border-radius: 1px;
     border: none;
     margin-left: 5px;
@@ -94,7 +94,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%) translateY(-175%);
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(75, 75, 75, 0.4);
     padding: 5px 15px;
     border-radius: 5px;
     box-shadow: 0px 10px 100px rgba(0, 0, 0, 0.45);
@@ -102,7 +102,7 @@
     -webkit-backdrop-filter: blur(50px);
     z-index: 1024;
     font-size: 13px;
-    color: #000;
+    color: #fff;
 
     &::after {
         content: '';
@@ -112,7 +112,7 @@
         transform: translateX(-50%) rotate(180deg);
         border-style: solid;
         border-width: 0 7.5px 7.5px 7.5px;
-        border-color: transparent transparent rgba(255, 255, 255, 0.4) transparent;
+        border-color: transparent transparent rgba(75, 75, 75, 0.4) transparent;
     }
 }
 
@@ -125,11 +125,12 @@
     padding: 0.3%;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
-    background-color: rgba(230, 230, 230, 0.35);
+    background-color: rgba(0, 0, 0, 0.18);
     display: inline-flex;
     flex-direction: row;
     z-index: 2;
-    color: #000;
+    color: #fff;
+    text-shadow: 0.5px 0.75px 20px rgba(0, 0, 0, 0.4);
 }
 
 #topbar #menu {
@@ -177,7 +178,7 @@
     margin: 0;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(75, 75, 75, 0.4);
     opacity: 0;
     border-radius: 10px;
     padding: 7.5px;
@@ -233,10 +234,11 @@
 #app-menu {
     border-radius: 8px;
     border: 0.5px solid rgba(0, 0, 0, 0.06);
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     width: 204px;
 }
 
@@ -252,12 +254,13 @@
 
 #control {
     font-size: 13px;
-    color: rgba(0, 0, 0, 0.86);
+    color: rgba(255, 255, 255, 0.86);
     border-radius: 5px;
     padding-left: 3.5%;
     padding-top: 2px;
     padding-bottom: 2px;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -269,9 +272,10 @@
 #alert-window {
     width: 260px;
     height: 232px;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.05), 0 38px 90px 0 rgba(0, 0, 0, 0.25), 0 0 1px 0 rgba(0, 0, 0, 0.60), inset 0 0 3px 0 rgba(255, 255, 255, 0.10);
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.05), 0 38px 90px 0 rgba(0, 0, 0, 0.25),
+    0 0 1px 0 rgba(0, 0, 0, 0.60), inset 0 0 3px 0 rgba(255, 255, 255, 0.10);
     border-radius: 10px;
-    background: #fbfbfb6f;
+    background-color: rgba(75, 75, 75, 0.4);
     font-size: 13px;
     text-align: center;
     line-height: 16px;
@@ -284,6 +288,7 @@
     opacity: 0;
     animation: Alert 0.5s forwards ease-in-out, opacityBegin 0.525s forwards ease-in-out;
     animation-delay: 0.75s;
+    color: #fff;
 }
 
 #alert-window img {
@@ -329,9 +334,9 @@
     justify-content: center;
     align-items: center;
     border-radius: 5px;
-    background-image: linear-gradient(179deg, rgba(255, 255, 255, 0.17) 0%, rgba(255, 255, 255, 0.00) 96%), linear-gradient(to bottom right, #2277ff, #0c61ff);
+    background-image: linear-gradient(179deg, rgba(255, 255, 255, 0.17) 0%,
+    rgba(255, 255, 255, 0.00) 96%), linear-gradient(to bottom right, #2277ff, #0c61ff);
     background-size: 100% 100%;
-    color: #000000;
 }
 
 #alert-window #btn p {
@@ -348,7 +353,7 @@
     margin: 0;
     backdrop-filter: blur(50px);
     -webkit-backdrop-filter: blur(50px);
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(75, 75, 75, 0.4);
     opacity: 0;
     border-radius: 10px;
     padding: 7.5px;

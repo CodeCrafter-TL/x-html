@@ -30,13 +30,13 @@
 
     /* about hr */
 
-    &:has(+ img + hr + img:hover),
+    &:has(+ img:hover + hr + img),
     &:hover + hr + img {
         scale: 1.525;
         margin: 0 12.75px;
     }
 
-    &:has(+ img + hr + img + img:hover),
+    &:has(+ img:hover + hr + img + img),
     &:hover + img + hr + img {
         scale: 1.35;
         margin: 0 9px;

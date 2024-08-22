@@ -30,6 +30,19 @@ function makeDraggable(element) {
     });
 }
 
+function topbarText(text1, text2, text3, text4, text5, text6, text7, text8, text9, text10) {
+    menu1.innerHTML = text1;
+    menu2.innerHTML = text2;
+    menu3.innerHTML = text3;
+    menu4.innerHTML = text4;
+    menu5.innerHTML = text5;
+    menu6.innerHTML = text6;
+    menu7.innerHTML = text7;
+    menu8.innerHTML = text8;
+    menu9.innerHTML = text9;
+    menu10.innerHTML = text10;
+}
+
 function makeDraggableHardWare(element) {
     let isDragging = false;
     let offsetX, offsetY;
@@ -79,7 +92,7 @@ function BackLogon() {
     setTimeout(function () { dock.style.animation = 'DockBack 0.75s forwards ease-in-out' }, 500)
     topbar.style.opacity = 0
     apple_menu.style.opacity = 0
-    setTimeout(function () { window.location = './logon.html' }, 2000)
+    setTimeout(function () { window.location = './logon.html?bg=none' }, 2000)
 }
 
 function updateTime() {
@@ -98,14 +111,12 @@ function updateTime() {
 }
 
 function Sleep() {
-    body.children.style.opacity = 0;
+    document.body.children.style.opacity = `0`;
     body.style.backgroundImage = 'none'
     body.style.backgroundColor = '#000'
     document.addEventListener('mousemove', function (e) {
-        topbar.style.opacity = 1
-        apple_menu.style.opacity = 1
-        dock.style.opacity = 1
-        body.style.backgroundImage = 'url(./images/macOS 13 Ventura White.jpg)'
+        document.body.children.style.opacity = `1`;
+        body.style.backgroundImage = `url(./images/${wallpaper_now}.jpg)`
     })
 }
 
@@ -115,7 +126,23 @@ function Show_AppleMenu() {
         apple_menu.style.zIndex = 2
         h4div.style.opacity = 1
         appleFrame.style.backgroundColor = `rgba(255, 255, 255, 0.5)`
-        menu = true
+        menu = true;
+        apple_menu.addEventListener('click', function (e) {
+            let click = e.target;
+            if (!click.matches('#app-menu')) {
+                apple_menu.style.animation = `opacityBack 0.125s ease-in-out`;
+                h4div.style.animation = `opacityBack 0.125s ease-in-out`;
+                appleFrame.style.backgroundColor = `rgba(255, 255, 255, 0)`
+                setTimeout(function () {
+                    apple_menu.style.zIndex = -0.5;
+                    apple_menu.style.opacity = 0;
+                    h4div.style.opacity = 0;
+                    h4div.style.animation = `none`;
+                    apple_menu.style.animation = `none`;
+                    menu = false;
+                }, 125)
+            }
+        });
     } else {
         apple_menu.style.animation = `opacityBack 0.125s ease-in-out`;
         h4div.style.animation = `opacityBack 0.125s ease-in-out`;
@@ -134,16 +161,20 @@ function Show_AppleMenu() {
 function setTopbar(color) {
     if (color == 'white') {
         topbar.style.color = '#fff';
+        topbar.style.textShadow = `0 1px 5px rgba(0, 0, 0, 0.2)`;
     } else if (color == 'black') {
         topbar.style.color = '#000';
+        topbar.style.textShadow = `none`;
     } else {
         return
     }
 }
 
-let wallpaper_now = 'Sequoia-Day';
+let wallpaper_now = bg.style.backgroundImage.replace('./images/', '').replace('.jpg', '').replace('url(', '').replace(')', '');
 
 function change_wall(wallpaper) {
+    let wallpaperId = $$('wallpaper-looking-new');
+    let wallpaperLooking = $$('by-looking-new');
     if (wallpaper == 'bigsur') {
         bg.style.backgroundImage = `url(./images/BigSur-Day.jpg)`;
         wallpaper_now = 'BigSur-Day';
@@ -228,6 +259,7 @@ document.addEventListener("contextmenu", function (e) {
         let ClickedElement = e.target;
         if (!ClickedElement.matches('.contextmenu')) {
             right_menu.style.display = `none`;
+            right_menu.style.transition = `opacity 0.5s ease-out`;
             right_menu.style.opacity = 0;
             right_menu.style.top = `${e.clientY}px`;
             right_menu.style.left = `${e.clientX}px`;
@@ -247,3 +279,63 @@ function loadStyleSheet(filename) {
 function removeStyleSheet(link) {
     document.head.removeChild(link);
 }
+
+function selectWindowInit() {
+    const windows = document.querySelectorAll('.window');
+    let maxZIndex = 2;
+
+    windows.forEach(win => {
+        win.addEventListener('mousedown', function () {
+            // 更新 maxZIndex
+            maxZIndex *= 2;
+            window.index *= 2;
+            this.style.zIndex = maxZIndex * 2;
+            if (win.id == 'settings') {
+                topbarText("系统设置", "文件", "编辑", "显示", "窗口", "帮助", "", "", "", "");
+            } else if (win.id == 'safari-window') {
+                topbarText("Safari浏览器", "文件", "编辑", "显示", "历史记录", "书签", "窗口", "帮助", "", "");
+            } else {
+                topbarText("访达", "文件", "编辑", "显示", "前往", "窗口", "帮助", "", "", "");
+            }
+        });
+    });
+}
+
+function theme(name) {
+    if (name == 'light') {
+        if (window.apps) {
+            window.apps.href = `./css/apps.css`;
+            window.ui.href = `./css/ui.css`;
+            window.finder.href = `./css/finder.css`;
+            return;
+        }
+        window.apps = loadStyleSheet('apps.css');
+        window.ui = loadStyleSheet('ui.css');
+        window.finder = loadStyleSheet('finder.css');
+        if (wallpaper_now.indexOf('Night') !== -1) {
+            change_wall(wallpaper_now.replace('Night', 'Day'));
+        } else {
+            change_wall(wallpaper_now);
+        }
+    } else {
+        if (window.apps) {
+            window.apps.href = `./css/dark/apps.css`;
+            window.ui.href = `./css/dark/ui.css`;
+            window.finder.href = `./css/dark/finder.css`;
+            return;
+        } 
+        window.apps = loadStyleSheet('dark/apps.css');
+        window.ui = loadStyleSheet('dark/ui.css');
+        window.finder = loadStyleSheet('dark/finder.css');
+        if (wallpaper_now.indexOf('Day') !== -1) {
+            change_wall(wallpaper_now.replace('Day', 'Night'));
+        } else {
+            change_wall(wallpaper_now);
+        }
+    }
+}
+
+/* document.addEventListener('mousemove', function (e) {
+    cursor.style.top = e.clientY;
+    cursor.style.left = e.clientX;
+}); */

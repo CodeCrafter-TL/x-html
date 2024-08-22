@@ -4,18 +4,25 @@
 <head>
     <title>macOS</title>
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" media="(prefers-color-scheme: light)" href="./css/apps.css" />
+    <link rel="stylesheet" media="(prefers-color-scheme: light)" href="./css/ui.css" />
+    <link rel="stylesheet" media="(prefers-color-scheme: light)" href="./css/finder.css" />
+
     <link rel="stylesheet" href="./css/animations.css" />
-    <link rel="stylesheet" href="./css/apps.css" />
-    <link rel="stylesheet" href="./css/ui.css" />
-    <link rel="stylesheet" href="./css/finder.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="./css/dark/apps.css" />
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="./css/dark/ui.css" />
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="./css/dark/finder.css" />
+    <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="./css/dark/style.css" />
+
     <link rel="icon" href="./images/AppleInternalIcon 2.png" />
 
     <meta charset="utf-8" />
 </head>
 
 <body id="body">
-    <section id="bg">
+    <section id="bg"> <!-- Background Image and Right-click menu -->
         <div id="contextmenu" class="contextmenu">
             <div class="h4-div" id="ct-menu h4-div">
                 <div id="control">
@@ -51,45 +58,48 @@
             </div>
         </div>
     </section>
-    <main id="desktop">
-        <footer id="dock">
+    <main id="desktop"> <!-- Desktop -->
+        <footer id="dock"> <!-- Dock -->
             <div class="icns" id="icns">
-                <img src="./icons/finder.svg" alt="访达" onclick="OpenApp(this)" />
-                <img src="./icons/launchpad.svg" alt="启动台" onclick="OpenApp(this)" />
-                <img src="./icons/safari.svg" alt="Safari浏览器" onclick="OpenApp(this)" />
-                <img src="./icons/message.svg" alt="信息" onclick="OpenApp(this)" />
-                <img src="./icons/mail.svg" alt="邮件" onclick="OpenApp(this)" />
-                <img src="./icons/map.svg" alt="地图" onclick="OpenApp(this)" />
-                <img src="./icons/photo.svg" alt="照片" onclick="OpenApp(this)" />
-                <img src="./icons/facetime.svg" alt="FaceTime通话" onclick="OpenApp(this)" />
-                <img src="./icons/date.svg" alt="日历" onclick="OpenApp(this)" />
-                <img src="./icons/people.svg" alt="联系人" onclick="OpenApp(this)" />
-                <img src="./icons/things.svg" alt="提醒事项" onclick="OpenApp(this)" />
-                <img src="./icons/note.svg" alt="备忘录" onclick="OpenApp(this)" />
-                <img src="./images/AppIcon.png" alt="无边记" onclick="OpenApp(this)"/>
-                <img src="./icons/tv.svg" alt="视频" onclick="OpenApp(this)" />
-                <img src="./icons/music.svg" alt="音乐" onclick="OpenApp(this)" />
-                <img src="./icons/fm.svg" alt="播客" onclick="OpenApp(this)" />
-                <img src="./images/AppIcon 102.png" alt="App Store" onclick="OpenApp(this)"/>
-                <img src="./icons/settings.svg" alt="系统设置" onclick="OpenApp(this)" />
+                <img src="./icons/finder.svg" alt="访达" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/launchpad.svg" alt="启动台" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/safari.svg" alt="Safari浏览器" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/message.svg" alt="信息" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/mail.svg" alt="邮件" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/map.svg" alt="地图" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/photo.svg" alt="照片" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/facetime.svg" alt="FaceTime通话" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/date.svg" alt="日历" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/people.svg" alt="联系人" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/things.svg" alt="提醒事项" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/note.svg" alt="备忘录" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./images/AppIcon.png" alt="无边记" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/tv.svg" alt="视频" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/music.svg" alt="音乐" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/fm.svg" alt="播客" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./images/AppIcon 102.png" alt="App Store" onclick="OpenApp(this, maxZIndex)" />
+                <img src="./icons/settings.svg" alt="系统设置" onclick="OpenApp(this, maxZIndex)" />
                 <hr>
-                <img src="./images/downloads.png" alt="下载" onclick="OpenApp(this)" width="64" height="64" />
-                <img src="./icons/trash-full.svg" alt="废纸篓" onclick="OpenApp(this)" />
+                <img src="./images/downloads.png" alt="下载" onclick="OpenApp(this, maxZIndex)" width="64" height="64" />
+                <img src="./icons/trash-full.svg" alt="废纸篓" onclick="OpenApp(this, maxZIndex)" />
             </div>
         </footer>
-        <header id="topbar">
+        <header id="topbar"> <!-- Finder Bar -->
             <section id="menu">
                 <div style="font-size: 22px; margin-left: 5px; padding-left: 7.5px; padding-right: 7.5px; border-radius: 5px;"
                     onclick="Show_AppleMenu()" id="apple-frame">
                     <h4></h4>
                 </div>
-                <h4 style="margin-left: 2%; font-weight: bold;" id="menu1">访达</h4>
+                <h4 style="margin-left: 2%;/* font-weight: bold;*/" id="menu1">访达</h4>
                 <h4 style="margin-left: 2%;" id="menu2" onclick="OpenMenu(this)">文件</h4>
                 <h4 style="margin-left: 2%;" id="menu3" onclick="OpenMenu(this)">编辑</h4>
                 <h4 style="margin-left: 2%;" id="menu4" onclick="OpenMenu(this)">显示</h4>
                 <h4 style="margin-left: 2%;" id="menu5" onclick="OpenMenu(this)">前往</h4>
                 <h4 style="margin-left: 2%;" id="menu6" onclick="OpenMenu(this)">窗口</h4>
                 <h4 style="margin-left: 2%;" id="menu7" onclick="OpenMenu(this)">帮助</h4>
+                <h4 style="margin-left: 2%;" id="menu8" onclick="OpenMenu(this)"></h4>
+                <h4 style="margin-left: 2%;" id="menu9" onclick="OpenMenu(this)"></h4>
+                <h4 style="margin-left: 2%;" id="menuX" onclick="OpenMenu(this)"></h4>
             </section>
             <section id="status">
                 <h4 style="margin-right: 2%;" id="Time" onclick="OpenMenu(this)">00:00</h4>
@@ -97,35 +107,10 @@
                 <h4 style="margin-right: 1.2%;" id="Date" onclick="OpenMenu(this)">4月22日</h4>
             </section>
         </header>
-        <div id="hardware">
-            <div id="win-tool" style="margin-top: 8px; margin-left: 8px;">
-                <div id="close" onclick="exit('#hardware')"></div>
-                <div id="none" style="margin: 0;"></div>
-                <div id="none"></div>
-            </div>
-            <img src="./images/com.apple.macpro-2019 2.png" alt="macpro-2019" />
-            <h2>Mac Pro</h2>
-            <h5 style="margin-top: 20px; color: rgba(0, 0, 0, 0.7);" class="year">2019</h5>
-            <h5 style="top: 55%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 50px)">处理器</h5>
-            <h5 style="top: 55%; color: rgba(0, 0, 0, 0.8);">2.5GHz 二十八核Intel Xeon W</h5>
-            <h5 style="top: 59%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 50px)">图形卡</h5>
-            <h5 style="top: 59%; color: rgba(0, 0, 0, 0.8);">AMD Radeon Pro W6600X</h5>
-            <h5 style="top: 63%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 40px)">内存</h5>
-            <h5 style="top: 63%; color: rgba(0, 0, 0, 0.8);">1.5 TB 2933MHz DIMM</h5>
-            <h5 style="top: 67%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 60px)">启动磁盘</h5>
-            <h5 style="top: 67%; color: rgba(0, 0, 0, 0.8);">Macintosh HD</h5>
-            <h5 style="top: 71%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 50px)">序列号</h5>
-            <h5 style="top: 71%; color: rgba(0, 0, 0, 0.8);">CCSTDMAC2019</h5>
-            <h5 style="top: 75%; color: rgba(0, 0, 0, 0.7); left: calc(30% - 55px)">macOS</h5>
-            <h5 style="top: 75%; color: rgba(0, 0, 0, 0.8);">Sonoma 14.3.1</h5>
-            <h5
-                style="text-align: center; top: 87.5%; left: 50%; color: rgba(0, 0, 0, 0.6); transform: translate(-50%, -50%); width: 100%; height: auto; ">
-                &trade;和&copy; 1983-2024 Apple Inc.<br>保留一切权利。</h5>
-        </div>
-        <div id="apple-menu">
+        <div id="apple-menu"> <!-- Apple Menu -->
             <div class="h4-div" id="app-menu h4-div">
                 <div id="control">
-                    <h4 onclick="AboutHardWare()" style="margin: 0;"> 关于本机</h4>
+                    <h4 onclick="AboutHardWare(maxZIndex)" style="margin: 0;"> 关于本机</h4>
                 </div>
                 <hr id="menu-hr">
                 <div id="control">
@@ -147,10 +132,10 @@
                     <h4 onclick="Sleep()" style="margin: 0; margin-top: 4px;"> 睡眠</h4>
                 </div>
                 <div id="control">
-                    <h4 onclick="Reset()" style="margin: 0; margin-top: 4px;"> 重新启动</h4>
+                    <h4 onclick="Reset()" style="margin: 0; margin-top: 4px;"> 重新启动...</h4>
                 </div>
                 <div id="control">
-                    <h4 onclick="Shutdown()" style="margin: 0; margin-top: 4px;"> 关机</h4>
+                    <h4 onclick="Shutdown()" style="margin: 0; margin-top: 4px;"> 关机...</h4>
                 </div>
                 <hr id="menu-hr">
                 <div id="control">
@@ -161,7 +146,7 @@
                 </div>
             </div>
         </div>
-        <div id="lp-bg">
+        <div id="lp-bg"> <!-- LaunchPad App -->
             <div id="launchpad">
                 <div class="s">
                     <h5>搜索</h5>
@@ -188,7 +173,7 @@
                     <h5>备忘录</h5>
                 </div>
                 <div class="ct"><img src="./images/AppIcon 112.png" alt="FaceTime" onclick="OpenApp(this)" />
-                    <h5>FaceTime</h5>
+                    <h5>FaceTime 通话</h5>
                 </div>
                 <div class="ct"><img src="./images/AppIcon 106.png" alt="信息" onclick="OpenApp(this)" />
                     <h5>信息</h5>
@@ -232,8 +217,14 @@
                 <div class="ct"><img src="./images/AppIcon 105.png" alt="计算器" onclick="OpenApp(this)" />
                     <h5>计算器</h5>
                 </div>
+                <div class="ct"><img src="./images/AppIcon.png" alt="无边记" onclick="OpenApp(this)" />
+                    <h5>无边记</h5>
+                </div>
                 <div class="ct"><img src="./images/AppIcon 137.png" alt="家庭" onclick="OpenApp(this)" />
                     <h5>家庭</h5>
+                </div>
+                <div class="ct"><img src="./images/AppIcon 101.png" alt="时钟" onclick="OpenApp(this)" />
+                    <h5>时钟</h5>
                 </div>
                 <div class="ct"><img src="./images/AppIconSiri 2.png" alt="Siri" onclick="OpenApp(this)" />
                     <h5>Siri</h5>
@@ -246,118 +237,141 @@
                 </div>
             </div>
         </div>
-        <div id="alert-window">
+        <div id="alert-window"> <!-- Alert (Welcome) -->
             <img src="./images/codecrafter-tl.jpg" />
             <p id="title">Welcome to this site</p>
             <p id="des">This webpage is an HTML page<br>that mimics the macOS interface</p>
             <div id="btn" onclick="exit('#alert-window')">
-                <p onclick="exit('#alert-window')">View now</p>
+                <p onclick="exit('#alert-window')">Try now</p>
             </div>
         </div>
-        <div class="finder" id="finder">
-            <div id="sidebar"></div>
-            <div id="edge"></div>
-            <div id="content"></div>
-            <div id="toolbar">
-                <div id="win-tool">
-                    <div id="close" onclick='exit("#finder")'></div>
-                    <div id="minimize" onclick="small('finder')"></div>
-                    <div id="zoom" onclick='big("finder")'></div>
-                </div>
-                <div id="toolbar-right-content">
-                    <div id="back-for-ward">
-                        <img id="wards" src="./images/chevron.backward.png" />
-                        <img id="wards" src="./images/chevron.forward.png" style="margin: 0;" />
+        <noscript id="alert-window" style="animation-delay: 0s;"> <!-- Alert (Warning - Disabled JavaScript) -->
+            <img style="animation: none; opacity: 1;" src="./images/AlertStopIcon 3.png" />
+            <p id="title" style="animation: none; opacity: 1;">No!!!</p>
+            <p id="des" style="animation: none; opacity: 1;">You disabled JavaScript.</p>
+            <div id="btn" onclick="window.location = 'about:blank'">
+                <p onclick="window.location = 'about:blank'">Exit</p>
+            </div>
+        </noscript>
+        <div id="old" style="display: none;"> <!-- Old windows (By running need) -->
+            <div class="window finder" id="finder">
+                <div id="sidebar"></div>
+                <div id="edge"></div>
+                <div id="content"></div>
+                <div id="toolbar">
+                    <div id="win-tool">
+                        <div id="close" onclick='exit("#finder")'></div>
+                        <div id="minimize" onclick="small('finder')"></div>
+                        <div id="zoom" onclick='big("finder")'></div>
                     </div>
-                    <p id="title">Title</p>
-                    <div id="right-tools">
-                        <div id="item">
-                            <img src="./images/magnifyingglass.png" width="20" height="20" />
+                    <div id="toolbar-right-content">
+                        <div id="back-for-ward">
+                            <img id="wards" src="./images/chevron.backward.png" />
+                            <img id="wards" src="./images/chevron.forward.png" style="margin: 0;" />
+                        </div>
+                        <p id="title">Title</p>
+                        <div id="right-tools">
+                            <div id="item">
+                                <img src="./images/magnifyingglass.png" width="20" height="20" />
+                            </div>
+                        </div>
+                        <div id="toolbar-bottom-border"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="safari-window" class="window">
+                <div id="safari-topbar">
+                    <div id="win-tool">
+                        <div id="close" onclick='exit("#safari-window", "safari")'></div>
+                        <div id="minimize" onclick="small('safari-window')"></div>
+                        <div id="zoom" onclick='big("safari-window")'></div>
+                    </div>
+                    <!-- <div id="page-using">
+                        <img src="./images/chevron.backward.png" style="margin-right: 8px; width: 13px; height: 16px" />
+                        <img src="./images/chevron.forward.png" style="width: 13px; height: 16px" />
+                    </div>
+                    <div id="page-tool"></div>
+                    <img src="./images/plus@10x.png" width="20" height="20" /> -->
+                </div>
+                <iframe id="main-safari" src="https://os.ccstudio.top/desktop"
+                    title="Webintosh - Come for macOS on line!">
+                </iframe>
+            </div>
+            <div id="settings" class="window">
+                <div id="sidebar">
+                    <div id="win-tool" style="top: 10px; left: 10px">
+                        <div id="close" onclick='exit("#settings")'></div>
+                        <div id="minimize" onclick="small('settings')"></div>
+                        <div id="zoom" onclick='big("settings")'></div>
+                    </div>
+                </div>
+                <div id="divider-edge"></div>
+                <div id="main">
+                    <div style="display: flex; flex-direction: row;">
+                        <img id="by-looking" src="./images/Sequoia-Day.jpg" width="160" height="90"
+                            style="border-radius: 8px; border: solid 3px white" />
+                        <div style="display: flex; flex-direction: column; justify-content: center;">
+                            <section id="content-frame" style="width: 305px; margin-top: 0;">
+                                <p id="wallpaper-looking">Sequoia</p>
+                                <div
+                                    style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                                    <div id="btn" onclick="change_wall('auto')">自动</div>
+                                    <div id="btn" onclick="change_wall('day')">浅色</div>
+                                    <div id="btn" onclick="change_wall('night')">深色</div>
+                                </div>
+                            </section>
+                            <section id="content-frame" style="width: 305px;">
+                                <p id="wallpaper-looking">显示为屏幕保护程序</p>
+                                <div
+                                    style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                                    <div id="switch-showasscreen" class="switch off">
+                                        <div id="knob"></div>
+                                    </div>
+                                    <div id="btn">关闭</div>
+                                </div>
+                            </section>
+                            <section id="content-frame" style="width: 305px; margin-bottom: auto; margin-top: 0;">
+                                <p id="wallpaper-looking">在所有空间中显示</p>
+                                <div
+                                    style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                                    <div id="switch-showallplace" class="switch on">
+                                        <div id="knob"></div>
+                                    </div>
+                                    <div id="btn">开启</div>
+                                </div>
+                            </section>
                         </div>
                     </div>
-                    <div id="toolbar-bottom-border"></div>
-                </div>
-            </div>
-        </div>
-        <div id="safari-window">
-            <div id="safari-topbar">
-                <div id="win-tool">
-                    <div id="close" onclick='exit("#safari-window")'></div>
-                    <div id="minimize" onclick="small('safari-window')"></div>
-                    <div id="zoom" onclick='big("safari-window")'></div>
-                </div>
-                <div id="page-using">
-                    <img src="./images/chevron.backward.png" style="margin-right: 8px; width: 13px; height: 16px" />
-                    <img src="./images/chevron.forward.png" style="width: 13px; height: 16px" />
-                </div>
-                <div id="page-tool"></div>
-                <img src="./images/plus@10x.png" width="20" height="20" />
-            </div>
-            <iframe id="main-safari" src="https://ccstudio.top/" title="CodeCrafter">
-            </iframe>
-        </div>
-        <div id="settings">
-            <div id="sidebar">
-                <div id="win-tool" style="top: 10px; left: 10px">
-                    <div id="close" onclick='exit("#settings")'></div>
-                    <div id="minimize" onclick="small('settings')"></div>
-                    <div id="zoom" onclick='big("settings")'></div>
-                </div>
-            </div>
-            <div id="divider-edge"></div>
-            <div id="main">
-                <div style="display: flex; flex-direction: row;">
-                    <img id="by-looking" src="./images/Sequoia-Day.jpg" width="160" height="90"
-                        style="border-radius: 8px; border: solid 3px white" />
-                    <div style="display: flex; flex-direction: column; justify-content: center;">
-                        <section id="content-frame" style="width: 305px; margin-top: 0;">
-                            <p id="wallpaper-looking">Sequoia</p>
-                            <div
-                                style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                                <div id="btn" onclick="change_wall('auto')">自动</div>
-                                <div id="btn" onclick="change_wall('day')">浅色</div>
-                                <div id="btn" onclick="change_wall('night')">深色</div>
+                    <section id="content-frame">
+                        <p id="sub-title">壁纸</p>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                            <div id="btn" onclick="change_wall('bigsur')">Big Sur</div>
+                            <div id="btn" onclick="change_wall('monterey')">Monterey</div>
+                            <div id="btn" onclick="change_wall('ventura')">Ventura</div>
+                            <div id="btn" onclick="change_wall('sonoma')">Sonoma</div>
+                            <div id="btn" onclick="change_wall('sequoia')">Sequoia</div>
+                        </div>
+                    </section>
+                    <section id="content-frame">
+                        <p id="sub-title">自动隐藏和显示程序坞</p>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                            <div id="switch-dockhidden" class="switch off">
+                                <div id="knob"></div>
                             </div>
-                        </section>
-                        <section id="content-frame" style="width: 305px;">
-                            <p id="wallpaper-looking">显示为屏幕保护程序</p>
-                            <div
-                                style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                                <div id="btn">关闭</div>
+                            <div id="btn" onclick="setDock('hidden')" id="open-dock-hidden">点击开启</div>
+                        </div>
+                    </section>
+                    <section id="content-frame">
+                        <p id="sub-title">程序坞放大</p>
+                        <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                            <div id="switch-dockzoom" class="switch off">
+                                <div id="knob"></div>
                             </div>
-                        </section>
-                        <section id="content-frame" style="width: 305px; margin-bottom: auto; margin-top: 0;">
-                            <p id="wallpaper-looking">在所有空间中显示</p>
-                            <div
-                                style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                                <div id="btn">开启</div>
-                            </div>
-                        </section>
-                    </div>
+                            <div id="btn" onclick="setDockZoom(true)" id="open-dock-hidden">点击开启</div>
+                            <div id="btn" onclick="setDockZoom(false)" id="open-dock-hidden">点击关闭</div>
+                        </div>
+                    </section>
                 </div>
-                <section id="content-frame">
-                    <p id="sub-title">壁纸</p>
-                    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                        <div id="btn" onclick="change_wall('bigsur')">Big Sur</div>
-                        <div id="btn" onclick="change_wall('monterey')">Monterey</div>
-                        <div id="btn" onclick="change_wall('ventura')">Ventura</div>
-                        <div id="btn" onclick="change_wall('sonoma')">Sonoma</div>
-                        <div id="btn" onclick="change_wall('sequoia')">Sequoia</div>
-                    </div>
-                </section>
-                <section id="content-frame">
-                    <p id="sub-title">自动隐藏和显示程序坞</p>
-                    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                        <div id="btn" onclick="setDock('hidden')" id="open-dock-hidden">点击开启</div>
-                    </div>
-                </section>
-                <section id="content-frame">
-                    <p id="sub-title">程序坞放大</p>
-                    <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
-                        <div id="btn" onclick="setDockZoom(true)" id="open-dock-hidden">点击开启</div>
-                        <div id="btn" onclick="setDockZoom(false)" id="open-dock-hidden">点击关闭</div>
-                    </div>
-                </section>
             </div>
         </div>
     </main>
@@ -365,6 +379,8 @@
     <script src="./script/script.js"></script>
     <script src="./script/app.js"></script>
     <script src="./script/dock.js"></script>
+    <script src="./script/window.js"></script>
+    <script src="./script/widgets.js"></script>
 
     <script>
 
@@ -372,6 +388,10 @@
         let fd_status = false;
         let menu = false;
         let be_big = false;
+        let safari_state = false;
+        let hardware_state = false;
+        let setting_state = false;
+        let maxZIndex = 2;
 
         let desktop = $$("desktop");
         let desktop_bg = $$("bg");
@@ -390,20 +410,28 @@
         let right_menu = $$('contextmenu');
         let window_server = $$('window-server');
         let settings = $$('settings');
-        let wallpaperId = $$('wallpaper-looking');
-        let wallpaperLooking = $$('by-looking');
         let _backdrop = $$('backdrop');
         let appleFrame = $$('apple-frame');
+        let cursor = $$('cursor');
 
-        setInterval(updateTime, 400);
-        updateTime();
-        change_wall('auto'); // init (get time, get wallpaper)
+        // Topbar Texts
+        let menu1 = $$('menu1');
+        let menu2 = $$('menu2');
+        let menu3 = $$('menu3');
+        let menu4 = $$('menu4');
+        let menu5 = $$('menu5');
+        let menu6 = $$('menu6');
+        let menu7 = $$('menu7');
+        let menu8 = $$('menu8');
+        let menu9 = $$('menu9');
+        let menu10 = $$('menuX');
 
         document.addEventListener("DOMContentLoaded", function () {
-            makeDraggableHardWare($$('hardware'));
-            makeDraggable($$('safari-window'));
-            makeDraggable($$('settings'));
-            makeDraggable($$('finder'));
+            setInterval(updateTime, 400);
+            updateTime();
+
+            selectWindowInit();
+            topbarText("访达", "文件", "编辑", "显示", "前往", "窗口", "帮助", "", "", "");
         });
 
     </script>

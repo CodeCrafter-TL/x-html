@@ -118,22 +118,34 @@
 
 @keyframes OpeningApp {
     0% {
-        margin-bottom: 0;
+        transform: translateY(0);
     }
 
-    25% {
-        margin-bottom: 100%;
+    20% {
+        transform: translateY(-35px);
     }
 
-    50% {
-        margin-bottom: 0;
+    37.5% {
+        transform: translateY(0);
+    }
+
+    57.5% {
+        transform: translateY(-35px);
     }
 
     75% {
-        margin-bottom: 100%;
+        transform: translateY(0);
     }
 
-    100% {
-        margin-bottom: 0;
+    95% {
+        transform: translateY(-35px);
+    }
+
+    112.5% {
+        transform: translateY(0);
+    }
+
+    132.5% {
+        transform: translateY(-35px);
     }
 }

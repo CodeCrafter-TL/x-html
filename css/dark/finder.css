@@ -1,7 +1,7 @@
 .finder {
     width: 700px;
     height: 400px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
     position: absolute;
     top: calc(50% - 250px);
     left: calc(50% - 350px);
@@ -12,7 +12,7 @@
 }
 
 #sidebar {
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     width: 200px;
@@ -21,7 +21,7 @@
 }
 
 #edge {
-    background-color: rgba(0, 0, 0, 0.10);
+    background-color: rgba(255, 255, 255, 0.10);
     box-shadow: -1px 0 0 0 rgba(0, 0, 0, 0.05);
     width: 1px;
     height: 400px;
@@ -42,7 +42,7 @@
 #toolbar-bottom-border {
     width: 500px;
     height: 1px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.4);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -59,6 +59,7 @@
     border-radius: 10px 10px 0 0;
     display: flex;
     align-items: flex-end;
+    color: #fff;
 }
 
 #back-for-ward {
@@ -71,11 +72,12 @@
 }
 
 #wards {
-    filter: invert(100%);
     width: 13px;
     height: 16px;
     margin-right: 10px;
     margin-left: 10px;
+    filter: invert(0%);
+    -webkit-filter: invert(0%);
 }
 
 #title {
@@ -98,12 +100,13 @@
 }
 
 #item {
-    filter: invert(100%);
     margin-left: 8px;
+    filter: invert(0%);
+    -webkit-filter: invert(0%);
 }
 
 #content {
-    background-color: #fff;
+    background-color: #1c2029;
     width: 500px;
     height: 400px;
     border-radius: 0 10px 10px 0;
