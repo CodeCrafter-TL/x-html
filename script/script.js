@@ -176,7 +176,6 @@ function change_wall(wallpaper) {
     let wallpaperId = $$('wallpaper-looking-new');
     let wallpaperLooking = $$('by-looking-new');
     wallpaper = wallpaper.toLowerCase();
-    alert(wallpaper);
     if (wallpaper == 'bigsur') {
         bg.style.backgroundImage = `url(./images/BigSur-Day.jpg)`;
         wallpaper_now = 'BigSur-Day';
