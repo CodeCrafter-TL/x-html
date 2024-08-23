@@ -1,4 +1,8 @@
+<!-- Format by tkintertools/README.md -->
+
 <h1 align="center">Webintosh</h1>
+
+<p align="center"><img alt="logo" src="./logo.png" title="Logo" width="150" height="150" /></p>
 
 <p align="center">
 <code>Webintosh</code> 是一个基于 <code>html</code> 的仿macOS项目。
@@ -43,7 +47,6 @@
 
 [现在开始使用 (镜像源)](https://os.ccstudio.top)
 
-[现在开始使用 (备用镜像源)](https://mac.ccstudio.top:3333)
 * （镜像源也许有意想不到的问题，建议使用原本的[GitHub Pages](https://codecrafter-tl.github.io/x-html)。
   
 * **登录密码：Ventura Sonoma Sequoia 都可以！**
