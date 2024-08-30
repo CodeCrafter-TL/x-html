@@ -283,7 +283,6 @@ function removeStyleSheet(link) {
 
 function selectWindowInit() {
     const windows = document.querySelectorAll('.window');
-    let maxZIndex = 2;
 
     windows.forEach(win => {
         win.addEventListener('mousedown', function () {

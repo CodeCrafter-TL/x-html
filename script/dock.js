@@ -18,6 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.addEventListener("mouseout", function () {
             appName.style.display = "none";
         });
+
+        icon.addEventListener("mousedown", function () {
+            icon.style.filter = 'grayscale(200%) brightness(75%)';
+        });
+
+        icon.addEventListener("mouseup", function () {
+            icon.style.filter = 'grayscale(0%) brightness(100%)';
+        });
     });
 });
 

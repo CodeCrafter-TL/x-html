@@ -51,7 +51,7 @@ function OpenApp(img, index) {
         if (lp_status == false) {
             lp_bg.style.opacity = 1;
             lp_bg.animation = 'opacityBegin 0.3s ease-in-out forwards';
-            lp_bg.style.zIndex = 4;
+            lp_bg.style.zIndex = window.index ** 2;
             topbar.style.animation = 'opacityBack 0.2s ease-in-out forwards';
             lp.style.animation = 'LaunchPadBegin 0.3s ease-in-out forwards';
             lp_status = true;
@@ -143,7 +143,7 @@ function OpenApp(img, index) {
     } else {
         alert('您打开了应用程序：' + altText);
     }
-    window.index *= 2;
+    window.index **= 2;
 }
 
 function getWallpaper() {

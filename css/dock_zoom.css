@@ -1,7 +1,7 @@
 .icns img {
     width: 64px;
     height: 64px;
-    transition: 0.275s ease-out;
+    transition: margin 0.3s ease-out, scale 0.3s ease-out;
     transform-origin: bottom;
     object-fit: cover;
 

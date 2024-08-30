@@ -4,6 +4,8 @@ body {
     user-select: none;
     -webkit-user-select: none;
     cursor: url('../images/cursor.png'), default;
+    --bezier-as-backing: cubic-bezier(.17, .88, .32, 1.27);
+    --bezier-macos: cubic-bezier(.17, .88, .32, 1.27);
 }
 
 h4:hover {
